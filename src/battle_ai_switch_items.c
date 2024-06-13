@@ -1587,12 +1587,7 @@ static u32 GetSwitchinHitsToKO(s32 damageTaken, u32 battler)
             case HOLD_EFFECT_CONFUSE_SWEET:
             case HOLD_EFFECT_CONFUSE_BITTER:
             case HOLD_EFFECT_CONFUSE_SOUR:
-                if (currentHP < maxHP / CONFUSE_BERRY_HP_FRACTION)
-                {
-                    singleUseItemHeal = maxHP / holdEffectParam;
-                    if (singleUseItemHeal == 0)
-                        singleUseItemHeal = 1;
-                }
+                
                 break;
             }
 
