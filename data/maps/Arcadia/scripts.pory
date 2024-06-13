@@ -1,0 +1,50 @@
+mapscripts Arcadia_MapScripts { }
+
+
+script Arcadia_EventScript_CylistSteelTm {
+
+lockall
+checkitem (ITEM_BICYCLE)
+if (var(VAR_RESULT) !=1 ) {
+if (flag(FLAG_UNUSED_0x026)) {
+msgbox (format("This TM contains a steel move! I don't know which one though."))
+waitmessage
+closemessage
+}
+
+else {
+msgbox (format("Wow what a rad bike! You a fellow cyclist like me? You should take this."))
+waitmessage
+closemessage 
+giveitem (ITEM_TM47_STEEL_WING)
+setflag (FLAG_UNUSED_0x026)
+msgbox (format("This TM contains a steel move! I don't know which one though."))
+waitmessage
+closemessage
+releaseall}
+}
+
+msgbox (format("I found this littered in the Underground Bike Path. If you find something down there you should pick it up too. Us cyclists could get hurt if our wheels get stuck."))
+waitmessage
+closemessage
+releaseall
+}
+
+script Arcadia_EventScript_ChangeBike {
+    lockall
+    msgbox (format("This rental bike looks great."))
+    checkflag (FLAG_RECEIVED_BIKE)
+    if (var(VAR_RESULT) ==1 ) {
+    call (MauvilleCity_BikeShop_EventScript_AskSwitchBikes)    
+    }
+
+    else {
+    msgbox (format("If I had a bike I could swap mine for this one."))
+    waitmessage
+    closemessage
+    releaseall
+
+    }
+
+
+}

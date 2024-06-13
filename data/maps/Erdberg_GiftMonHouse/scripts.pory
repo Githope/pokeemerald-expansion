@@ -1,0 +1,53 @@
+
+mapscripts Erdberg_GiftMonHouse_MapScripts { }
+
+script ErdbergGiftMonHouse_EventScript_MunchlaxGift {
+	lock
+    faceplayer
+	if (flag(FLAG_RECEIVED_LAVARIDGE_EGG) == true) {
+    msgbox ("Take care of my little Munchlax.")
+    waitmessage
+    closemessage
+    }
+	else {
+        msgbox ("You seem like a nice trainer.")
+        waitmessage
+        closemessage
+        msgbox ("Can you take care of my Munchlax for me?",MSGBOX_YESNO)
+        waitmessage
+        if (var(VAR_RESULT) == NO) {
+        closemessage
+        msgbox ("Oh... ok.")
+        waitmessage
+        closemessage  
+        release
+        end
+        }
+        else {
+            givemon (SPECIES_MUNCHLAX,15) 
+            
+            if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            msgbox ("I know you will be a great trainer for my Munchlax!")
+            setflag (FLAG_RECEIVED_LAVARIDGE_EGG)
+            playfanfare (MUS_OBTAIN_ITEM)
+            message ("You received a Munchlax.")
+            waitfanfare
+            release
+            end
+            }
+
+            elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            msgbox ("Oh you don't have any space.")
+            waitmessage
+            closemessage
+            msgbox ("The Pokémon was transfered to your PC.")
+            waitmessage
+            closemessage
+            setflag (FLAG_RECEIVED_LAVARIDGE_EGG)
+            release
+            end
+    }
+}
+}
+}
+

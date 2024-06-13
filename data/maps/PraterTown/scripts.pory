@@ -1,0 +1,56 @@
+mapscripts PraterTown_MapScripts { }
+
+script PraterTown_EventScript_CutGuy {
+
+msgbox ("Rami: Hey {PLAYER}!")
+fadescreen (FADE_TO_BLACK)
+clearflag (FLAG_HIDE_ROUTE_119_KECLEON_1)
+addobject (1)
+fadescreen (FADE_FROM_BLACK)
+waitmessage
+applymovement (1,CutGuyRunsOUT)
+waitmovement (0)
+msgbox ("Rami: Oh yeah, I forgot this!")
+waitmessage
+msgbox ("Cuts you across your back from behind!")
+msgbox ("Rami: Do not wake me up again!")
+waitmessage
+closemessage
+applymovement (1,CutGuyRunsIN)
+waitmovement (0)
+fadescreen (FADE_TO_BLACK)
+setvar (VAR_PRATER_TOWN_STATE, 2)
+setflag (FLAG_HIDE_ROUTE_119_KECLEON_1)
+removeobject (1)
+clearflag (FLAG_UNUSED_0x022)
+fadescreen (FADE_FROM_BLACK)
+addobject (2)
+    
+}
+
+
+movement CutGuyRunsOUT {
+
+walk_fast_down * 2
+face_right 
+    
+}
+
+movement CutGuyRunsIN {
+
+walk_slow_up * 2
+    
+}
+
+script Prater_Town_EventScript_CutHM_Item {
+
+giveitem (ITEM_HM01_CUT)
+setflag (FLAG_UNUSED_0x022)
+removeobject (2)
+playfanfare (MUS_OBTAIN_ITEM)
+msgbox ("You receive HM_01 Cut!")
+waitmessage
+closemessage
+releaseall
+    
+}

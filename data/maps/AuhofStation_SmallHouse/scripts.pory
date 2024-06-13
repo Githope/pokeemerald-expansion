@@ -1,0 +1,9 @@
+mapscripts AuhofStation_SmallHouse_MapScripts {}
+
+script EventScript_OldMan_AuhofStation_SmallHouse {
+
+msgbox (format("Oh! Um.... Hey Kid I am just growing some 'herbs' here..... so I can ... cook with them.... Yeah that's it. Oh you are looking for my son? He went to Route 3, west of here, to smash some rocks!"))
+waitmessage
+closemessage
+}
+

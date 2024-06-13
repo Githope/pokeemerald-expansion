@@ -7,7 +7,7 @@ FallarborTown_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 FallarborTown_PokemonCenter_1F_OnTransition:
-	setrespawn HEAL_LOCATION_FALLARBOR_TOWN
+	setrespawn HEAL_LOCATION_FLODOVILLE
 	call Common_EventScript_UpdateBrineyLocation
 	end
 

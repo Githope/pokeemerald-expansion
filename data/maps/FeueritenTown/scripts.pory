@@ -1,0 +1,153 @@
+
+mapscripts FeueritenTown_MapScripts { }
+
+script FeueritenTown_EventScript_BlockedCave {
+lockall
+msgbox (format("This Cave is blocked until Dave comes back"
+                "from his bath."))
+waitmessage
+closemessage
+releaseall
+}
+
+script FeueritenTown_EventScript_Wanderer {
+
+lockall
+faceplayer
+msgbox (format("Phew. After hiking over the Fiery Mountain I am glad that I can finally rest in this little village. If only it wasn't so hot here..."))
+
+waitmessage
+closemessage
+releaseall
+
+}
+
+script FeueritenTown_EventScript_Wanderer2 {
+
+lockall
+if (var(VAR_TEMP_7)==1) {
+faceplayer
+msgbox (format("I think the air up here even improves the taste of the cookies. I might even have another cookie for you if we meet again."))
+waitmessage
+closemessage
+releaseall
+}
+else {
+
+
+faceplayer
+msgbox (format("The air up here is much nicer than down in the village. I like having a picnic here from time to time. You should try it too. Here have a cookie."))
+waitmessage
+closemessage
+giveitem (ITEM_LAVA_COOKIE)
+msgbox (format("You recieve one Lava Cookie."))
+waitmessage
+closemessage
+setvar (VAR_TEMP_7,1)
+releaseall
+}
+}
+
+script FeueritenTown_EventScript_Biker1 {
+
+lockall
+faceplayer
+msgbox (format("Beat it kid! We ain't moving."))
+
+waitmessage
+closemessage
+releaseall
+
+}
+
+script FeueritenTown_EventScript_Biker2 {
+
+lockall
+faceplayer
+msgbox (format("Yeah this biking road is for team Turbo members only!"))
+
+waitmessage
+closemessage
+releaseall
+
+}
+
+script FeueritenTown_EventScript_Kid {
+
+lockall
+faceplayer
+msgbox (format("It's so hot here, I can't even enjoy the water."))
+
+waitmessage
+closemessage
+releaseall
+
+}
+
+script FeueritenTown_EventScript_OldLady {
+
+lockall
+faceplayer
+msgbox (format("Aaaaaah. My old bones needed this."))
+
+waitmessage
+closemessage
+releaseall
+
+}
+
+script FeueritenTown_EventScript_Fisherman {
+
+lockall
+faceplayer
+msgbox (format("Man, I have been fishing here for 2 weeks now and still have nothing to show for it. But that's ok. For us Fishermen it is all about patience."))
+
+waitmessage
+closemessage
+releaseall
+
+}
+
+script FeueritenTown_EventScript_GymSign {
+
+lockall
+msgbox (format("Feueriten Gym."))
+
+waitmessage
+closemessage
+releaseall
+
+}
+
+script FeueritenTown_EventScript_WelcomeSign {
+
+lockall
+msgbox (format("Feueriten. So hot it stabs you like a knife through your chest."))
+
+waitmessage
+closemessage
+releaseall
+
+}
+
+script FeueritenTown_EventScript_BikePathSign {
+
+lockall
+msgbox (format("Underground Biking Path."))
+
+waitmessage
+closemessage
+releaseall
+
+}
+
+script FeueritenTown_EventScript_MeteorCaveSign {
+
+lockall
+msgbox (format("Meteor Cave. Danger: Meteor showers occur heavily over this area."))
+
+waitmessage
+closemessage
+releaseall
+
+}

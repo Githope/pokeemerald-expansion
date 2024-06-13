@@ -1,0 +1,103 @@
+mapscripts Erdberg_MapScripts { }
+
+script Erdberg_Eventscript_ClashTTandS {
+
+playse (MUS_VS_AQUA_MAGMA)
+msgbox ("???:This Cave is off-limits to you Bikers!")
+waitmessage
+msgbox (format("That's ok, we will find a quicker way"
+                "with our machines anyway... Let's Ride!"))
+waitmessage
+closemessage
+msgbox ("???: Just stay out of our way.")
+waitmessage
+closemessage
+applymovement (5,Erdberg_BikersLeave)
+applymovement (6,Erdberg_BikersLeave)
+applymovement (7,Erdberg_BikersLeave)
+applymovement (1,Erdberg_SachidsLeave)
+applymovement (2,Erdberg_SachidsLeave)
+applymovement (4,Erdberg_SachidsLeave)
+waitmovement (0)
+setflag (FLAG_UNUSED_0x021)
+setvar (VAR_ERDBERG_STATE,1)
+removeobject (5)
+removeobject (4)
+removeobject (2)
+removeobject (1)
+removeobject (7)
+removeobject (6)
+playbgm (MUS_MT_CHIMNEY, TRUE)
+releaseall
+
+}
+
+movement Erdberg_BikersLeave {
+
+walk_fast_left * 6    
+}
+
+movement Erdberg_SachidsLeave {
+
+walk_right * 6
+walk_up * 3
+
+}
+
+script Erdberg_EventScript_YoungsterBlock {
+
+lockall
+faceplayer
+msgbox (format("My boss told me I can't let anyone in here until we broke through the caves inner wall. That includes nosey people like you."))
+
+waitmessage
+closemessage
+releaseall
+
+}
+
+script Erdberg_EventScript_Chef {
+
+lockall
+faceplayer
+msgbox (format("I keep telling them. We need more breaks. It's not like the guy can eat without a break either."))
+
+waitmessage
+closemessage
+releaseall
+
+}
+
+script Erdberg_EventScript_KitchenSign {
+
+lockall
+msgbox (format("Erdberg Food Services. We cook, you eat!"))
+
+waitmessage
+closemessage
+releaseall
+
+}
+
+script Erdberg_EventScript_Kid {
+
+lockall
+faceplayer
+msgbox (format("I heard an earthshattering roar coming from the Cave to the south. I would check it out but it is too dark in there for me and I get scared quickly."))
+
+waitmessage
+closemessage
+releaseall
+
+}
+
+script Erdberg_EventScript_WelcomeSign {
+
+lockall
+msgbox (format("Welcome to Erdberg. A quiet town amongst the grand canyons."))
+
+waitmessage
+closemessage
+releaseall
+
+}

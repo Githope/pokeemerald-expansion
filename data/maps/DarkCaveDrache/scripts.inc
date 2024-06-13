@@ -1,0 +1,7 @@
+DarkCaveDrache_MapScripts::
+map_script MAP_SCRIPT_ON_TRANSITION, DarkCaveDrache_EventScript_SetFlashLevel7
+.byte 0
+
+DarkCaveDrache_EventScript_SetFlashLevel7::
+setflashlevel 7
+return

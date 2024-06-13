@@ -6,7 +6,7 @@ RustboroCity_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 RustboroCity_PokemonCenter_1F_OnTransition:
-	setrespawn HEAL_LOCATION_RUSTBORO_CITY
+	setrespawn HEAL_LOCATION_AUHOF_STATION
 	call Common_EventScript_UpdateBrineyLocation
 	end
 
@@ -43,7 +43,7 @@ RustboroCity_PokemonCenter_1F_Text_MaleAndFemalePokemon:
 	.string "they're different.$"
 
 RustboroCity_PokemonCenter_1F_Text_HMCutNextDoor:
-	.string "The man next door gave me an HM!\p"
+	.string "The man down the road gave me an HM!\p"
 	.string "I used it to teach my POKéMON how to\n"
-	.string "CUT down skinny trees.$"
+	.string "SMASH some rocks.$"
 

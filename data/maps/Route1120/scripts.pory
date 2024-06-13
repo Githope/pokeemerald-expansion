@@ -1,0 +1,128 @@
+mapscripts Route1120_MapScripts { }
+
+script Route1120_EventScript_SurfBoy {
+    lockall
+    msgbox ("I can't swim yet so my Mum won't")
+    waitmessage
+    msgbox ("let me go into the Pool without my")
+    waitmessage
+    msgbox ("Pokémon. Do your Pokémon know how to swim?") 
+    waitmessage
+    msgbox ("Here this can teach them!")
+    waitmessage
+    closemessage
+    giveitem (ITEM_HM03_SURF)
+    msgbox ("RECEIVED HM03 SURF")
+    waitmessage
+    msgbox ("Now you can enjoy the water too!")
+    waitmessage
+    closemessage
+    releaseall
+}
+
+script Route1120_EventScript_TwoshiBattle {
+    lockall
+    msgbox (format("Yoshi: Come on, let's go enjoy the water."))
+    waitmessage
+    closemessage
+    msgbox (format("Twinni: I can't swim yet. You know that, Yoshi!"))
+    waitmessage
+    closemessage
+    playse (SE_PIN)
+    playbgm (MUS_ENCOUNTER_MAY, TRUE) 
+    applymovement (16,Route1120_Twinni_ComesCloser) 
+    applymovement (17,Route1120_Yoshi_ComesCloser)
+    waitmovement (0)
+    msgbox ("Twinni: Oh! Hey {PLAYER}, do you know how to swim?", MSGBOX_YESNO)
+     if (var(VAR_RESULT) == NO) {
+
+    msgbox (format("Twinni: Oh, wow. You are just like me. Haha. I bet your Pokémon don't know how to swim either then. We can show them how to Surf if you beat me in a Pokémon Battle."))
+    if (var(VAR_STARTER_MON) == 0) 
+    { trainerbattle_no_intro (TRAINER_MAY_ROUTE_103_TREECKO, Route1120_Text_TwinniDefeated)
+
+    }
+	elif (var(VAR_STARTER_MON) == 1) 
+    { trainerbattle_no_intro (TRAINER_MAY_ROUTE_103_TORCHIC, Route1120_Text_TwinniDefeated)
+    }
+	elif(
+        var(VAR_STARTER_MON) == 2) 
+    { trainerbattle_no_intro (TRAINER_MAY_ROUTE_103_MUDKIP, Route1120_Text_TwinniDefeated)
+    }
+    }
+
+        else {
+    msgbox (format("Yoshi: Oh, wow. You are just like me. Haha. But I bet your Pokémon don't know how to swim. We can show them how to Surf if you beat me in a Pokémon Battle. "))
+    if (var(VAR_STARTER_MON) == 0) 
+    { trainerbattle_no_intro (TRAINER_BRENDAN_ROUTE_103_TREECKO, Route1120_Text_YoshiDefeated)
+
+    }
+	elif (var(VAR_STARTER_MON) == 1) 
+    { trainerbattle_no_intro (TRAINER_BRENDAN_ROUTE_103_TORCHIC, Route1120_Text_YoshiDefeated)
+    }
+	elif(
+        var(VAR_STARTER_MON) == 2) 
+    { trainerbattle_no_intro (TRAINER_BRENDAN_ROUTE_103_MUDKIP, Route1120_Text_YoshiDefeated)
+    }
+        }
+    waitmessage
+    closemessage
+    msgbox (format("Yoshi: What a hot battle! Ok now time to cool down. Oh, I almost forgot."))
+	waitmessage
+    closemessage
+    giveitem (ITEM_HM03_SURF)
+    msgbox ("RECEIVED HM03 SURF.")
+    waitmessage
+    msgbox (format("Twinni: Now you and your Pokémon can enjoy the water too! Yoshi, let's go they are gonna close the pool soon."))
+    waitmessage
+    closemessage
+    applymovement (16,Route1120_Yoshi_Leaves)
+    msgbox (format("Yoshi: Ok, quick! Bye."))
+    applymovement (17,Route1120_Twinni_Leaves)
+    waitmessage
+    closemessage
+    waitmovement (17)
+    waitmovement (16)
+	removeobject (17)
+	removeobject (16)
+    setvar (VAR_UNUSED_0x40A8,1)
+    setflag (FLAG_UNUSED_0x027)
+    releaseall
+}
+
+movement Route1120_Twinni_ComesCloser {
+
+walk_left
+walk_down *3
+    
+}
+
+movement Route1120_Yoshi_ComesCloser {
+    
+walk_down *2
+
+}
+
+movement Route1120_Yoshi_Leaves {
+    
+walk_up *2
+walk_left *8
+}
+
+movement Route1120_Twinni_Leaves {
+
+walk_up *2
+walk_fast_left *8
+    
+}
+
+script Route1120_Text_TwinniDefeated {
+msgbox ("Twinni: Not again! Waaaaaaaah!")
+    waitmessage
+    closemessage
+}
+
+script Route1120_Text_YoshiDefeated {
+msgbox ("Yoshi: Not again! Waaaaaaaah!")
+    waitmessage
+    closemessage
+}

@@ -313,3 +313,45 @@ MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney:
 	.string "PROF. COZMO: But that TEAM MAGMA…\p"
 	.string "What are they going to do with that\n"
 	.string "METEORITE at MT. CHIMNEY?$"
+
+MeteorFalls_1F_1R_Eventscript_DemirIntro::
+	playse MUS_VS_AQUA_MAGMA
+	msgbox MeteorFalls_1F_1R_Eventscript_DemirIntro_Text_0
+	waitmessage
+	msgbox MeteorFalls_1F_1R_Eventscript_DemirIntro_Text_1
+	waitmessage
+	closemessage
+	msgbox MeteorFalls_1F_1R_Eventscript_DemirIntro_Text_2
+	waitmessage
+	closemessage
+	applymovement 7, MeteorFalls_1F_1R_Eventscript_KickersLeave
+	applymovement 8, MeteorFalls_1F_1R_Eventscript_KickersLeave
+	applymovement 9, MeteorFalls_1F_1R_Eventscript_KickersLeave
+	waitmovement 0
+	setflag FLAG_MET_PROF_COZMO
+	setvar VAR_METEOR_FALLS_STATE, 1
+	removeobject 7
+	removeobject 8
+	removeobject 6
+	releaseall
+	return
+
+
+MeteorFalls_1F_1R_Eventscript_KickersLeave:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+MeteorFalls_1F_1R_Eventscript_DemirIntro_Text_0:
+	.string "???:Ok. Try to secure the Cave quickly.$"
+
+MeteorFalls_1F_1R_Eventscript_DemirIntro_Text_1:
+	.string "The Boss said he is gonna pay us big\n"
+	.string "time. We just make sure no one enters\l"
+	.string "the cave.$"
+
+MeteorFalls_1F_1R_Eventscript_DemirIntro_Text_2:
+	.string "???: Someone is watching us. Scram!$"

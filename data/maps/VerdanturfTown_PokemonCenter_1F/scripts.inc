@@ -6,7 +6,7 @@ VerdanturfTown_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 VerdanturfTown_PokemonCenter_1F_OnTransition:
-	setrespawn HEAL_LOCATION_VERDANTURF_TOWN
+	setrespawn HEAL_LOCATION_PRATER_TOWN
 	call Common_EventScript_UpdateBrineyLocation
 	end
 
@@ -41,4 +41,3 @@ VerdanturfTown_PokemonCenter_1F_Text_VisitForBattleTent:
 	.string "saying.\p"
 	.string "Or is there somebody here that you\n"
 	.string "came to see?$"
-

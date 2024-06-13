@@ -1,0 +1,46 @@
+mapscripts IndoorPraterTown_Gym_MapScripts { }
+
+script IndoorPraterTown_Gym_LeaderRami {
+
+ if(var(VAR_PRATER_TOWN_STATE) == 0) {
+    message (format("RAMI: Hm … So, what's up? What do you want? Oh you want to challenge me? Fine, we will have a POKéMON battle.{PLAYER} … I am a bit high right now. So... Wait who are you again? Right! A battle! A battle!  {PLAYER}, you'd better give it your best shot! "))
+    waitmessage
+    closemessage
+    trainerbattle_no_intro (TRAINER_NORMAN_1,IndoorPraterTown_Gym_LeaderRami_Defeat)
+    msgbox (format("{PLAYER} received the GRASS BADGE from RAMI!"))
+    call (Common_EventScript_PlayGymBadgeFanfare)
+    msgbox (format(".RAMI: With that BADGE, the DEFENSE of all your POKéMON will increase. POKéMON that know the HM move SURF will be able to travel over water. This is my gift to you. {PLAYER}, I'm sure you can use it correctly."))
+	waitmessage
+    setflag (FLAG_DEFEATED_PETALBURG_GYM)
+    setflag (FLAG_BADGE05_GET)
+	giveitem (ITEM_TM19)
+	setflag (FLAG_RECEIVED_TM42)
+    call (LavaridgeTown_Gym_SetGymTrainers)
+	msgbox (format("RAMI: TM19 contains GIGA Drain. It sucks or something. Did I give you your badge already? .... .... .... Rami is asleep."))
+    waitmessage
+	msgbox (format("Rami: ..... .... .... hehe GIGA … draaain..Rami is still asleep....It's odd…$"))
+    closemessage
+	setvar (VAR_PRATER_TOWN_STATE, 1)
+	end
+ }
+
+ else {
+    msgbox ("...... ...... ......")
+    closemessage
+    releaseall
+ }
+
+}
+
+
+    text IndoorPraterTown_Gym_LeaderRami_Defeat {
+        "Hold on... Which type is my.. My gym?..."
+    }
+
+
+script IndoorPraterTownGym_EvenstScript_GymSign {
+    lockall
+    msgbox (format("Prater Town Gym. Type: Grass, Ace Level:31"))
+    closemessage
+    releaseall
+}

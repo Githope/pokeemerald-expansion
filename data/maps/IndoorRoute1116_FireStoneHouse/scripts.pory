@@ -1,0 +1,14 @@
+mapscripts IndoorRoute1116_FireStoneHouse_MapScripts { }
+
+
+script IndoorRoute1116_FireStoneHouse_EventScripts_FireStoneGirl {
+
+msgbox ("Oooooh. I found this really hot stone!")
+waitmessage
+msgbox ("Here you take it! It is too hot for me.")
+waitmessage
+closemessage
+giveitem (ITEM_FIRE_STONE)
+releaseall
+
+}

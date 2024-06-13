@@ -14,14 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_SAFARI_ZONE_NORTHWEST",
+      "map": "MAP_SAFARI_ZONE_SOUTHEAST",
       "offset": 0,
-      "direction": "up"
-    },
-    {
-      "map": "MAP_SAFARI_ZONE_SOUTH",
-      "offset": 0,
-      "direction": "right"
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -40,8 +35,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 0,
-      "y": 37,
+      "x": 13,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -61,7 +56,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",

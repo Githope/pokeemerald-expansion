@@ -1,0 +1,22 @@
+mapscripts IndoorFeueriten_Gym_MapScripts { }
+
+script IndoorFeueriten_EventScript_Gruntie {
+ 
+	trainerbattle_single(TRAINER_GRUNT_PETALBURG_WOODS, Gruntie_Intro, Gruntie_Outro)
+	msgbox(PostBattle_Gruntie, MSGBOX_AUTOCLOSE) 
+	waitmessage
+    end
+
+}
+
+text Gruntie_Intro{
+    "You will never win"
+}
+ 
+text Gruntie_Outro{
+    "Doesn't count"
+}
+ 
+text PostBattle_Gruntie{
+    "You have no chance against Dave..."
+}

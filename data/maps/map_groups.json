@@ -1,6 +1,24 @@
 {
   "group_order": [
     "gMapGroup_TownsAndRoutes",
+    "gMapGroup_TownsAndRoutesOld",
+    "gMapGroup_IndoorLiesingTown",
+    "gMapGroup_AuhofStation",
+    "gMapGroup_IndoorRoute1104",
+    "gMapGroup_IndoorFeueriten",
+    "gMapGroup_IndoorDrachenberg",
+    "gMapGroup_IndoorArcadia",
+    "gMapGroup_IndoorSchwechPort",
+    "gMapGroup_IndoorDonauIslands",
+    "gMapGroup_IndoorPraterTown",
+    "gMapGroup_IndoorRoute1116",
+    "gMapGroup_IndoorMoedling",
+    "gMapGroup_IndoorCubetopia",
+    "gMapGroup_IndoorFlodoville",
+    "gMapGroup_IndoorMahiMahiCity",
+    "gMapGroup_IndoorLugnercity",
+    "gMapGroup_IndoorPernHarbor",
+    "gMapGroup_IndoorInnahCity",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
     "gMapGroup_IndoorDewford",
@@ -25,6 +43,7 @@
     "gMapGroup_IndoorRoute117",
     "gMapGroup_IndoorRoute121",
     "gMapGroup_Dungeons",
+    "gMapGroup_DungeonsExpanded",
     "gMapGroup_IndoorDynamic",
     "gMapGroup_SpecialArea",
     "gMapGroup_IndoorRoute104Prototype",
@@ -36,6 +55,61 @@
     "gMapGroup_IndoorRoute124"
   ],
   "gMapGroup_TownsAndRoutes": [
+    "LiesingTown",
+    "Route1101",
+    "Route1102",
+    "Route1103",
+    "AuhofStation",
+    "Route1104",
+    "Route1105",
+    "FeueritenTown",
+    "Route1106",
+    "Route1107",
+    "Erdberg",
+    "Route1108",
+    "Route1109",
+    "Arcadia",
+    "Route1110",
+    "Route1111",
+    "Route1112",
+    "Schwechport",
+    "Route1113",
+    "Route1114",
+    "Donau_Islands",
+    "Route1115",
+    "PraterTown",
+    "Route1116",
+    "Route1117",
+    "Route1118",
+    "Flodoville",
+    "Route1119",
+    "Cubetopia",
+    "Moedling",
+    "Route1120",
+    "Route1121",
+    "MahiMahiCity",
+    "Route1122",
+    "LugnerCity",
+    "LugnerPalace",
+    "Route1123",
+    "Route1124",
+    "Route1125",
+    "PowerPlant",
+    "Route1126",
+    "Route1127",
+    "Route1128",
+    "Route1129",
+    "Route1130",
+    "PernHarbor",
+    "Route1131",
+    "InnahCity",
+    "Route1132",
+    "Route1133",
+    "Route1134",
+    "Route1135",
+    "Route1136"
+  ],
+  "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",
     "SlateportCity",
     "MauvilleCity",
@@ -94,6 +168,71 @@
     "Underwater_Route105",
     "Underwater_Route125"
   ],
+  "gMapGroup_IndoorLiesingTown": [
+    "LiesingTown_OldLadysHouse",
+    "LiesingTown_TwinniHouse",
+    "LiesingTown_YoshiHouse",
+    "LiesingTown_SomeoneHouse",
+    "LiesingTown_ShoeStore",
+    "RatHouse_Cellar",
+    "IndoorLiesingTown_SimonHouse"
+  ],
+  "gMapGroup_AuhofStation": [
+    "AuhofStation_BigHouse",
+    "AuhofStation_MiddleHouse",
+    "AuhofStation_TravelHouse",
+    "AuhofStation_SmallHouse"
+  ],
+  "gMapGroup_IndoorRoute1104": [
+
+  ],
+  "gMapGroup_IndoorFeueriten": [
+    "IndoorFeueriten_Gym"
+  ],
+  "gMapGroup_IndoorDrachenberg": [
+    "IndoorDrachenberg_Gym",
+    "Erdberg_GiftMonHouse"
+  ],
+  "gMapGroup_IndoorArcadia": [
+    "IndoorArcadia_School"
+  ],
+  "gMapGroup_IndoorSchwechPort": [
+    "IndoorSchwechPort_Gym",
+    "IndoorSchwchPort_FlyBar"
+  ],
+  "gMapGroup_IndoorDonauIslands": [
+    "IndoorDonauIslands_Gym"
+  ],
+  "gMapGroup_IndoorPraterTown": [
+    "IndoorPraterTown_Gym",
+    "IndoorPraterTown_Gym1B"
+  ],
+  "gMapGroup_IndoorRoute1116": [
+    "IndoorRoute1116_FireStoneHouse"
+  ],
+  "gMapGroup_IndoorMoedling": [
+    "IndoorMoedling_Gym"
+  ],
+  "gMapGroup_IndoorCubetopia": [
+    "IndoorCubetopia_Gym",
+    "IndoorCubeTopia_ContestHall"
+  ],
+  "gMapGroup_IndoorFlodoville": [
+
+  ],
+  "gMapGroup_IndoorMahiMahiCity": [
+    "IndoorMahiMahiCity_Gym"
+  ],
+  "gMapGroup_IndoorLugnercity": [
+
+  ],
+  "gMapGroup_IndoorPernHarbor": [
+    "PernCave",
+    "PernCave_2"
+  ],
+  "gMapGroup_IndoorInnahCity": [
+
+  ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
     "LittlerootTown_BrendansHouse_2F",
@@ -106,7 +245,8 @@
     "OldaleTown_House2",
     "OldaleTown_PokemonCenter_1F",
     "OldaleTown_PokemonCenter_2F",
-    "OldaleTown_Mart"
+    "OldaleTown_Mart",
+    "AuhofStation_RatHouse"
   ],
   "gMapGroup_IndoorDewford": [
     "DewfordTown_House1",
@@ -429,7 +569,31 @@
     "TerraCave_Entrance",
     "TerraCave_End",
     "AlteringCave",
-    "MeteorFalls_StevensCave"
+    "MeteorFalls_StevensCave",
+    "FrostCave",
+    "DarkCaveDrache",
+    "FrostCaveUp1",
+    "FrostCaveUp2",
+    "MtLaa",
+    "SpectreHideout_1F",
+    "SpectreHideout_2F",
+    "SpectreHideout_3F",
+    "DarkCaveDrachePlateu",
+    "LobauCave_1F",
+    "LobauCave_2F",
+    "MtLaaCave",
+    "DesertCave_1",
+    "DesertCave_2",
+    "DesertCave_3",
+    "DesertTemple_1F",
+    "FossilCave_Left_1F",
+    "GR_VictoryRoad_Main_Hall",
+    "DeserTemple_2F",
+    "DesertCave_4",
+    "GR_VictoryRoad_Top"
+  ],
+  "gMapGroup_DungeonsExpanded": [
+
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -583,7 +747,11 @@
     "NavelRock_Down10",
     "NavelRock_Down11",
     "NavelRock_Bottom",
-    "TrainerHill_Elevator"
+    "TrainerHill_Elevator",
+    "SafariZone_Orangerie",
+    "SafariZone_Lab",
+    "BikingTunnel",
+    "BikingTunnel2"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",
@@ -605,7 +773,9 @@
     "Route110_TrickHousePuzzle7",
     "Route110_TrickHousePuzzle8",
     "Route110_SeasideCyclingRoadNorthEntrance",
-    "Route110_SeasideCyclingRoadSouthEntrance"
+    "Route110_SeasideCyclingRoadSouthEntrance",
+    "BikingTunnelCyclingNorthEntrance",
+    "BikingTunnelCyclingSouthEntrance"
   ],
   "gMapGroup_IndoorRoute113": [
     "Route113_GlassWorkshop"
@@ -620,72 +790,5 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
-  ],
-  "connections_include_order": [
-    "LittlerootTown",
-    "OldaleTown",
-    "DewfordTown",
-    "LavaridgeTown",
-    "FallarborTown",
-    "VerdanturfTown",
-    "PacifidlogTown",
-    "PetalburgCity",
-    "SlateportCity",
-    "MauvilleCity",
-    "RustboroCity",
-    "FortreeCity",
-    "LilycoveCity",
-    "MossdeepCity",
-    "SootopolisCity",
-    "EverGrandeCity",
-    "Route101",
-    "Route102",
-    "Route103",
-    "Route104",
-    "Route105",
-    "Route106",
-    "Route107",
-    "Route108",
-    "Route109",
-    "Route110",
-    "Route111",
-    "Route112",
-    "Route113",
-    "Route114",
-    "Route115",
-    "Route116",
-    "Route117",
-    "Route118",
-    "Route119",
-    "Route120",
-    "Route121",
-    "Route122",
-    "Route123",
-    "Route124",
-    "Route125",
-    "Route126",
-    "Route127",
-    "Route128",
-    "Route129",
-    "Route130",
-    "Route131",
-    "Route132",
-    "Route133",
-    "Route134",
-    "Underwater_Route105",
-    "Underwater_Route124",
-    "Underwater_Route125",
-    "Underwater_Route126",
-    "Underwater_Route127",
-    "Underwater_Route128",
-    "Underwater_Route129",
-    "SafariZone_Northwest",
-    "SafariZone_North",
-    "SafariZone_Southwest",
-    "SafariZone_South",
-    "SafariZone_Northeast",
-    "SafariZone_Southeast",
-    "BattleFrontier_OutsideWest",
-    "BattleFrontier_OutsideEast"
   ]
 }

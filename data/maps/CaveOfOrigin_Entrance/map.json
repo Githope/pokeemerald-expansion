@@ -12,15 +12,17 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
-  "object_events": [],
+  "connections": 0,
+  "object_events": [
+
+  ],
   "warp_events": [
     {
       "x": 9,
       "y": 20,
       "elevation": 3,
-      "dest_map": "MAP_SOOTOPOLIS_CITY",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_LUGNER_CITY",
+      "dest_warp_id": "0"
     },
     {
       "x": 9,
@@ -30,6 +32,10 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }

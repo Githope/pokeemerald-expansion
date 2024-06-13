@@ -148,6 +148,7 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_DEWFORD_GYM
+	setflag FLAG_DEFEATED_VOLTORB_2_NEW_MAUVILLE
 	setflag FLAG_BADGE02_GET
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
@@ -162,20 +163,21 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_BRAWLY_MATCH_CALL
+	setflag FLAG_HIDE_VERDANTURF_TOWN_SCOTT
 	setvar VAR_ROXANNE_CALL_STEP_COUNTER, 0
 	setflag FLAG_ENABLE_ROXANNE_FIRST_CALL
 	release
 	end
 
 DewfordTown_Gym_EventScript_GiveBulkUp::
-	giveitem ITEM_TM08
+	giveitem ITEM_TM28
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_BagIsFull
 	msgbox DewfordTown_Gym_Text_ExplainBulkUp, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM08
 	return
 
 DewfordTown_Gym_EventScript_GiveBulkUp2:
-	giveitem ITEM_TM08
+	giveitem ITEM_TM28
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
 	msgbox DewfordTown_Gym_Text_ExplainBulkUp, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM08
@@ -285,22 +287,22 @@ DewfordTown_Gym_EventScript_GymStatue::
 DewfordTown_Gym_Text_GymGuideAdvice:
 	.string "Hey, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
-	.string "DEWFORD's GYM LEADER BRAWLY commands\n"
-	.string "FIGHTING-type POKéMON.\p"
-	.string "Going against him with NORMAL-type\n"
+	.string "Erdbergs GYM LEADER Manuel commands\n"
+	.string "Ground-type POKéMON.\p"
+	.string "Going against him with weak\n"
 	.string "POKéMON is asking for trouble.\p"
-	.string "FIGHTING POKéMON will lay a serious\n"
-	.string "smack down on NORMAL POKéMON,\l"
+	.string "Ground POKéMON will lay a serious\n"
+	.string "smack down on weak POKéMON,\l"
 	.string "so be careful!\p"
-	.string "What's worse, the GYM is as dark as\n"
-	.string "the ocean floor.\p"
-	.string "But it will get brighter after defeating\n"
-	.string "the TRAINERS in your way.\p"
-	.string "Hey, okay, go for it!$"
+	.string "What's worse, the GYM is as high up\n"
+	.string "the a mountain.\p"
+	.string "It will be difficult to climb\n"
+	.string "to the top with TRAINERS in your way.\p"
+	.string "His Ace is Level 21!$"
 
 DewfordTown_Gym_Text_GymGuidePostVictory:
-	.string "Whoah! It's turned too bright in here!\p"
-	.string "Your future is bright, too!$"
+	.string "You did it. As for the next gym.\p"
+	.string "The Leader has an Ace level 25!$"
 
 DewfordTown_Gym_Text_TakaoIntro:
 	.string "Might is right!\n"
@@ -380,8 +382,8 @@ DewfordTown_Gym_Text_CristianPostBattle:
 	.string "Go after that BADGE!$"
 
 DewfordTown_Gym_Text_BrawlyIntro:
-	.string "I'm BRAWLY!\n"
-	.string "DEWFORD's GYM LEADER!\p"
+	.string "I'm Manuel!\n"
+	.string "Erdberg's GYM LEADER!\p"
 	.string "I've been churned in the rough waves\n"
 	.string "of these parts, and I've grown tough\l"
 	.string "in the pitch-black cave!\p"
@@ -396,11 +398,11 @@ DewfordTown_Gym_Text_BrawlyDefeat:
 	.string "Take this GYM BADGE!$"
 
 DewfordTown_Gym_Text_ReceivedKnuckleBadge:
-	.string "{PLAYER} received the KNUCKLE BADGE\n"
-	.string "from BRAWLY.$"
+	.string "{PLAYER} received the EARTH BADGE\n"
+	.string "from Manuel.$"
 
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis:
-	.string "The KNUCKLE BADGE makes all POKéMON\n"
+	.string "The EARTH BADGE makes all POKéMON\n"
 	.string "up to Level 30, even those you get in\l"
 	.string "trades, obey without question.\p"
 	.string "And, you'll be able to use the HM move\n"
@@ -409,9 +411,9 @@ DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis:
 	.string "MACHINE, too.$"
 
 DewfordTown_Gym_Text_ExplainBulkUp:
-	.string "That TM08 contains BULK UP.\p"
-	.string "It's a move that raises both ATTACK\n"
-	.string "and DEFENSE stats.\p"
+	.string "That TM28 contains Dig.\p"
+	.string "It's a move that buries your Pokémon\n"
+	.string "and let's it strike from below.\p"
 	.string "… … … … … …$"
 
 DewfordTown_Gym_Text_RegisteredBrawly:

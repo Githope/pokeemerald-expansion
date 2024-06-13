@@ -116,3 +116,44 @@ IslandCave_EventScript_RanFromRegice::
 	setvar VAR_0x8004, SPECIES_REGICE
 	goto Common_EventScript_LegendaryFlewAway
 	end
+
+IslandCave_EventScript_Sachid::
+	lockall
+	msgbox IslandCave_EventScript_Sachid_Text_0
+	waitmessage
+	closemessage
+	playse MUS_ENCOUNTER_MAGMA
+	applymovement 5, Common_Movement_FacePlayer
+	waitmovement 0
+	playse SE_PIN
+	applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	trainerbattle_no_intro TRAINER_VANESSA, IslandCave_EventScript_SachidDefeat
+	delay 30
+	msgbox IslandCave_EventScript_Sachid_Text_1
+	waitmessage
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject 2
+	removeobject 3
+	removeobject 4
+	removeobject 5
+	setflag FLAG_HIDE_JAGGED_PASS_MAGMA_GUARD
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	end
+
+
+IslandCave_EventScript_Sachid_Text_0:
+	.string "Sachid: Grrrr... All of my work... All of my\n"
+	.string "preparations... FOR NOTHING. YOU! Come\l"
+	.string "here. I need to take out some anger!$"
+
+IslandCave_EventScript_Sachid_Text_1:
+	.string "SIGH... Leaves$"
+
+IslandCave_EventScript_SachidDefeat::
+	.string "Sachid: I guess the Explosion damaged\n"
+	.string "my team more than i thought...$"

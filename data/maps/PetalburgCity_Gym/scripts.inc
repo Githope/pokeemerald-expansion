@@ -377,35 +377,19 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	message PetalburgCity_Gym_Text_ReceivedBalanceBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
-	msgbox PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_PETALBURG_GYM
-	setvar VAR_PETALBURG_GYM_STATE, 7
 	setflag FLAG_BADGE05_GET
-	special ResetHealLocationFromDewford
-	call EventScript_HideMrBriney
-	setflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
-	clearflag FLAG_HIDE_MAUVILLE_CITY_WATTSON
-	setvar VAR_0x8008, 5
+	setvar VAR_PETALBURG_GYM_STATE, 7
+	msgbox PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis, MSGBOX_DEFAULT
 	call Common_EventScript_SetGymTrainers
-	clearflag FLAG_HIDE_DEWFORD_HALL_SLUDGE_BOMB_MAN
-	call PetalburgCity_Gym_EventScript_UnlockAllDoors
-	special DrawWholeMapView
 	call PetalburgCity_Gym_EventScript_GiveFacade
-	delay 30
 	msgbox PetalburgCity_Gym_Text_DadHappyAndSad, MSGBOX_DEFAULT
 	closemessage
-	delay 40
-	playse SE_DOOR
-	delay 10
-	addobject LOCALID_WALLYS_DAD
-	switch VAR_FACING
-	case DIR_NORTH, PetalburgCity_Gym_EventScript_WallysDadArrivesNorth
-	case DIR_WEST, PetalburgCity_Gym_EventScript_WallysDadArrivesWest
-	case DIR_EAST, PetalburgCity_Gym_EventScript_WallysDadArrivesEast
+	setvar VAR_PRATER_TOWN_STATE, 1
 	end
 
 PetalburgCity_Gym_EventScript_GiveFacade::
-	giveitem ITEM_TM42
+	giveitem ITEM_TM19
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
 	setflag FLAG_RECEIVED_TM42
 	msgbox PetalburgCity_Gym_Text_ExplainFacade, MSGBOX_DEFAULT
@@ -873,8 +857,7 @@ PetalburgCity_Gym_EventScript_RightGymLeadersRoomDoor::
 	end
 
 PetalburgCity_Gym_EventScript_Randall::
-	trainerbattle_single TRAINER_RANDALL, PetalburgCity_Gym_Text_RandallIntro, PetalburgCity_Gym_Text_RandallDefeat, PetalburgCity_Gym_EventScript_SlideOpenSpeedRoomDoors
-	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_RandallPostBadge
+	trainerbattle_single TRAINER_RANDALL, PetalburgCity_Gym_Text_RandallIntro, PetalburgCity_Gym_Text_RandallDefeat
 	msgbox PetalburgCity_Gym_Text_RandallPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -890,7 +873,7 @@ PetalburgCity_Gym_EventScript_RandallPostBadge::
 	end
 
 PetalburgCity_Gym_EventScript_Parker::
-	trainerbattle_single TRAINER_PARKER, PetalburgCity_Gym_Text_ParkerIntro, PetalburgCity_Gym_Text_ParkerDefeat, PetalburgCity_Gym_EventScript_SlideOpenConfusionRoomDoors
+	trainerbattle_single TRAINER_PARKER, PetalburgCity_Gym_Text_ParkerIntro, PetalburgCity_Gym_Text_ParkerDefeat,
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_ParkerPostBadge
 	msgbox PetalburgCity_Gym_Text_ParkerPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -907,7 +890,7 @@ PetalburgCity_Gym_EventScript_ParkerPostBadge::
 	end
 
 PetalburgCity_Gym_EventScript_George::
-	trainerbattle_single TRAINER_GEORGE, PetalburgCity_Gym_Text_GeorgeIntro, PetalburgCity_Gym_Text_GeorgeDefeat, PetalburgCity_Gym_EventScript_SlideOpenRecoveryRoomDoors
+	trainerbattle_single TRAINER_GEORGE, PetalburgCity_Gym_Text_GeorgeIntro, PetalburgCity_Gym_Text_GeorgeDefeat
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_GeorgePostBadge
 	msgbox PetalburgCity_Gym_Text_GeorgePostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -924,7 +907,7 @@ PetalburgCity_Gym_EventScript_GeorgePostBadge::
 	end
 
 PetalburgCity_Gym_EventScript_Berke::
-	trainerbattle_single TRAINER_BERKE, PetalburgCity_Gym_Text_BerkeIntro, PetalburgCity_Gym_Text_BerkeDefeat, PetalburgCity_Gym_EventScript_SlideOpenOHKORoomDoors
+	trainerbattle_single TRAINER_BERKE, PetalburgCity_Gym_Text_BerkeIntro, PetalburgCity_Gym_Text_BerkeDefeat
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_BerkePostBadge
 	msgbox PetalburgCity_Gym_Text_BerkePostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -941,7 +924,7 @@ PetalburgCity_Gym_EventScript_BerkePostBadge::
 	end
 
 PetalburgCity_Gym_EventScript_Mary::
-	trainerbattle_single TRAINER_MARY, PetalburgCity_Gym_Text_MaryIntro, PetalburgCity_Gym_Text_MaryDefeat, PetalburgCity_Gym_EventScript_SlideOpenAccuracyRoomDoors
+	trainerbattle_single TRAINER_MARY, PetalburgCity_Gym_Text_MaryIntro, PetalburgCity_Gym_Text_MaryDefeat
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_MaryPostBadge
 	msgbox PetalburgCity_Gym_Text_MaryPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -958,7 +941,7 @@ PetalburgCity_Gym_EventScript_MaryPostBadge::
 	end
 
 PetalburgCity_Gym_EventScript_Alexia::
-	trainerbattle_single TRAINER_ALEXIA, PetalburgCity_Gym_Text_AlexiaIntro, PetalburgCity_Gym_Text_AlexiaDefeat, PetalburgCity_Gym_EventScript_SlideOpenDefenseRoomDoors
+	trainerbattle_single TRAINER_ALEXIA, PetalburgCity_Gym_Text_AlexiaIntro, PetalburgCity_Gym_Text_AlexiaDefeat
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_AlexiaPostBadge
 	msgbox PetalburgCity_Gym_Text_AlexiaPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -975,7 +958,7 @@ PetalburgCity_Gym_EventScript_AlexiaPostBadge::
 	end
 
 PetalburgCity_Gym_EventScript_Jody::
-	trainerbattle_single TRAINER_JODY, PetalburgCity_Gym_Text_JodyIntro, PetalburgCity_Gym_Text_JodyDefeat, PetalburgCity_Gym_EventScript_SlideOpenStrengthRoomDoors
+	trainerbattle_single TRAINER_JODY, PetalburgCity_Gym_Text_JodyIntro, PetalburgCity_Gym_Text_JodyDefeat
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_JodyPostBadge
 	msgbox PetalburgCity_Gym_Text_JodyPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -1257,14 +1240,14 @@ PetalburgCity_Gym_Text_YouHaveGottenStronger:
 	.string "that you've earned.$"
 
 PetalburgCity_Gym_Text_NormanIntro:
-	.string "DAD: Hm…\n"
+	.string "RAMI: Hm…\n"
 	.string "So, you did get four GYM BADGES.\p"
-	.string "Fine, as I promised, we will have\n"
+	.string "Fine, we will have\n"
 	.string "a POKéMON battle.\p"
 	.string "{PLAYER}…\p"
-	.string "I'm so happy that I can have\n"
-	.string "a real battle with my own child.\p"
-	.string "But, a battle is a battle!\p"
+	.string "I am a bit high right now.\n"
+	.string "So... Wait who are you again?\p"
+	.string "Right! A battle! A battle!\p"
 	.string "I will do everything in my power as\n"
 	.string "a GYM LEADER to win.\p"
 	.string "{PLAYER}, you'd better give it your\n"
@@ -1272,18 +1255,18 @@ PetalburgCity_Gym_Text_NormanIntro:
 
 PetalburgCity_Gym_Text_NormanDefeat:
 	.string "…\p"
-	.string "I… I can't…\p"
-	.string "I can't believe it. {PLAYER}…\p"
-	.string "I lost to {PLAYER}?\p"
-	.string "But, rules are rules!\n"
-	.string "Here, take this.$"
+	.string "Wait, what's going on…\p"
+	.string "Who are you? {PLAYER}…\p"
+	.string "I lost to.... {PLAYER}?\p"
+	.string "Hold on... My which type is\n"
+	.string "My gym?... Here, take this.$"
 
 PetalburgCity_Gym_Text_ReceivedBalanceBadge:
-	.string "{PLAYER} received the BALANCE BADGE\n"
-	.string "from DAD!$"
+	.string "{PLAYER} received the GRASS BADGE\n"
+	.string "from RAMI!$"
 
 PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis:
-	.string "DAD: With that BADGE, the DEFENSE\n"
+	.string "RAMI: With that BADGE, the DEFENSE\n"
 	.string "of all your POKéMON will increase.\p"
 	.string "POKéMON that know the HM move SURF\n"
 	.string "will be able to travel over water.\p"
@@ -1291,18 +1274,18 @@ PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis:
 	.string "sure you can use it correctly.$"
 
 PetalburgCity_Gym_Text_ExplainFacade:
-	.string "DAD: TM42 contains FACADE.\p"
-	.string "It doubles the power of moves if\n"
-	.string "the POKéMON is poisoned, paralyzed,\l"
-	.string "or burned.\p"
-	.string "It might be able to turn a bad\n"
-	.string "situation into an advantage.$"
+	.string "RAMI: TM19 contains GIGA Drain.\p"
+	.string "Sucks or something.\n"
+	.string "Did I give you your badge already?\l"
+	.string "....\p"
+	.string "....\n"
+	.string ".... Rami is asleep.$"
 
 PetalburgCity_Gym_Text_DadHappyAndSad:
-	.string "DAD: As the GYM LEADER, I can't\n"
-	.string "express how upset I am…\p"
-	.string "But as a father, it makes me both\n"
-	.string "happy and a little sad. It's odd…$"
+	.string "Rami: .....\n"
+	.string "...... hehe GIGA … draaain..\p"
+	.string "Rami is still asleep....\n"
+	.string "It's odd…$"
 
 PetalburgCity_Gym_Text_PleaseComeWithMe:
 	.string "Ah, there you are, {PLAYER}{KUN}!\p"

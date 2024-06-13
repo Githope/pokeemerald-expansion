@@ -8332,10 +8332,10 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM51] =
+    [ITEM_TM51_SILVER_WIND] =
     {
         .name = _("TM51"),
-        .itemId = ITEM_TM51,
+        .itemId = ITEM_TM51_SILVER_WIND,
         .price = 3000,
         .description = sTM51Desc,
         .importance = I_REUSABLE_TMS,
@@ -8632,10 +8632,10 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM76] =
+    [ITEM_TM76_ROCK_BLAST] =
     {
         .name = _("TM76"),
-        .itemId = ITEM_TM76,
+        .itemId = ITEM_TM76_ROCK_BLAST,
         .price = 3000,
         .description = sTM76Desc,
         .importance = I_REUSABLE_TMS,
@@ -10355,5 +10355,17 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
+    },
+
+    [ITEM_KATANA] =
+    {
+        .name = _("Katana"),
+        .itemId = ITEM_KATANA,
+        .price = 0,
+        .description = sKatanaDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 };

@@ -225,27 +225,22 @@ Route101_EventScript_BirchsBag::
 	setflag FLAG_RESCUED_BIRCH
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ZIGZAGOON
-	setobjectxy OBJ_EVENT_ID_PLAYER, 6, 13
+	setobjectxy OBJ_EVENT_ID_PLAYER, 26, 11
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	special ChooseStarter
 	waitstate
-	applymovement LOCALID_BIRCH, Route101_Movement_BirchApproachPlayer
 	waitmovement 0
-	msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
 	special HealPlayerParty
 	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
 	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
 	setvar VAR_BIRCH_LAB_STATE, 2
 	setvar VAR_ROUTE101_STATE, 3
+	setvar VAR_Liesingtown_State, 2
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route101_EventScript_HideMayInBedroom
-	call_if_eq VAR_RESULT, FEMALE, Route101_EventScript_HideBrendanInBedroom
-	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
+	warp MAP_LIESING_TOWN, 26, 11
 	waitstate
-	release
+	releaseall
 	end
 
 Route101_EventScript_HideMayInBedroom::
@@ -274,15 +269,15 @@ Route101_Text_DontLeaveMe:
 	.string "Don't leave me like this!$"
 
 Route101_Text_YouSavedMe:
-	.string "PROF. BIRCH: Whew…\p"
-	.string "I was in the tall grass studying wild\n"
-	.string "POKéMON when I was jumped.\p"
-	.string "You saved me.\n"
+	.string "Whew…\p"
+	.string "We heard something in the alley\n"
+	.string "when we saw those kittens being attacked.\p"
+	.string "But you saved those kittens.\n"
 	.string "Thanks a lot!\p"
-	.string "Oh?\p"
-	.string "Hi, you're {PLAYER}{KUN}!\p"
-	.string "This is not the place to chat, so come\n"
-	.string "by my POKéMON LAB later, okay?$"
+	.string "So what is your name?\p"
+	.string "Hi,{PLAYER}{KUN}!\p"
+	.string "This is my Sister Twinni,\n"
+	.string "and I am Yoshi. Nice to meet you!$"
 
 Route101_Text_TakeTiredPokemonToPokeCenter:
 	.string "If POKéMON get tired, take them to\n"
@@ -299,4 +294,3 @@ Route101_Text_WildPokemonInTallGrass:
 Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
 	.string "{UP_ARROW} OLDALE TOWN$"
-

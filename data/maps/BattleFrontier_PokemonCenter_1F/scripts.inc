@@ -6,7 +6,7 @@ BattleFrontier_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 BattleFrontier_PokemonCenter_1F_OnTransition:
-	setrespawn HEAL_LOCATION_BATTLE_FRONTIER_OUTSIDE_EAST
+	setrespawn HEAL_LOCATION_INNAH_CITY
 	end
 
 BattleFrontier_PokemonCenter_1F_EventScript_Nurse::

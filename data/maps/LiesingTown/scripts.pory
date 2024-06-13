@@ -1,0 +1,382 @@
+
+mapscripts LiesingTown_MapScripts { }
+
+script LiesingTown_EventScript_Trigger {
+
+    playse (SE_PIN)
+    playbgm (MUS_HELP,TRUE)
+    lockall
+    message ("HEY YOU! You gotta help us! QUICK!")
+    waitmessage
+    closemessage
+    applymovement (OBJ_EVENT_ID_PLAYER,PlayerToTwinni)
+    waitmovement (OBJ_EVENT_ID_PLAYER)
+    msgbox ("Will you help please?",MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES){
+    message ("OK! Follow us!")
+    waitmessage
+    closemessage
+    applymovement (3,TwinniDog_Escort)
+    applymovement (7,YoshiDog_Escort)
+    delay (40)
+    applymovement (OBJ_EVENT_ID_PLAYER,PlayerToTwinniAgain)
+    waitmovement (OBJ_EVENT_ID_PLAYER)
+	releaseall
+    setvar (VAR_Liesingtown_State,0)
+	end
+    }
+    else {
+    msgbox ("This is not funny.... Follow us! NOW!")
+    applymovement (3,TwinniDog_Escort)
+    applymovement (7,YoshiDog_Escort)
+    delay (40)
+    applymovement (OBJ_EVENT_ID_PLAYER,PlayerToTwinniAgain)
+    waitmovement (OBJ_EVENT_ID_PLAYER)
+	releaseall
+    setvar (VAR_Liesingtown_State,0)
+	end
+    }
+
+
+}
+
+script LiesingTown_EventScript_Trigger1 {
+
+    playse (SE_PIN)
+    playbgm (MUS_HELP,TRUE)
+    lockall
+    message ("HEY YOU! You gotta help us! QUICK!")
+    waitmessage
+    closemessage
+    applymovement (OBJ_EVENT_ID_PLAYER,PlayerToTwinni1)
+    waitmovement (OBJ_EVENT_ID_PLAYER)
+    msgbox ("Will you help please?",MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES){
+    message ("OK! Follow us!")
+    waitmessage
+    closemessage
+    applymovement (3,TwinniDog_Escort)
+    applymovement (7,YoshiDog_Escort)
+    delay (40)
+    applymovement (OBJ_EVENT_ID_PLAYER,PlayerToTwinniAgain)
+    waitmovement (OBJ_EVENT_ID_PLAYER)
+	releaseall
+    setvar (VAR_Liesingtown_State,0)
+	end
+    }
+    else {
+    msgbox ("This is not funny.... Follow us! NOW!")
+    applymovement (3,TwinniDog_Escort)
+    applymovement (7,YoshiDog_Escort)
+    delay (40)
+    applymovement (OBJ_EVENT_ID_PLAYER,PlayerToTwinniAgain)
+    waitmovement (OBJ_EVENT_ID_PLAYER)
+	releaseall
+    setvar (VAR_Liesingtown_State,0)
+	end
+    }
+
+
+}
+
+script LiesingTown_EventScript_Trigger2 {
+
+    playse (SE_PIN)
+    playbgm (MUS_HELP,TRUE)
+    lockall
+    message ("HEY YOU! You gotta help us! QUICK!")
+    waitmessage
+    closemessage
+    applymovement (OBJ_EVENT_ID_PLAYER,PlayerToTwinni2)
+    waitmovement (OBJ_EVENT_ID_PLAYER)
+    msgbox ("Will you help please?",MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES){
+    message ("OK! Follow us!")
+    waitmessage
+    closemessage
+    applymovement (3,TwinniDog_Escort)
+    applymovement (7,YoshiDog_Escort)
+    delay (40)
+    applymovement (OBJ_EVENT_ID_PLAYER,PlayerToTwinniAgain)
+    waitmovement (OBJ_EVENT_ID_PLAYER)
+	releaseall
+    setvar (VAR_Liesingtown_State,0)
+	end
+    }
+    else {
+    msgbox ("This is not funny.... Follow us! NOW!")
+    applymovement (3,TwinniDog_Escort)
+    applymovement (7,YoshiDog_Escort)
+    delay (40)
+    applymovement (OBJ_EVENT_ID_PLAYER,PlayerToTwinniAgain)
+    waitmovement (OBJ_EVENT_ID_PLAYER)
+	releaseall
+    setvar (VAR_Liesingtown_State,0)
+	end
+    }
+
+
+}
+movement PlayerToTwinni {
+    walk_right * 4
+    
+}
+
+movement PlayerToTwinni1 {
+    walk_right * 1
+    
+}
+
+movement PlayerToTwinni2 {
+    walk_up * 1
+    walk_right * 1
+    
+}
+
+movement TwinniDog_Escort {
+    face_down
+    delay_8
+    face_up
+    delay_4
+    face_right
+    walk_right * 2
+    face_up 
+    walk_up * 3
+    face_down
+   
+}
+
+movement YoshiDog_Escort {
+
+face_up
+delay_4
+face_left
+delay_8
+face_right
+walk_right * 2
+face_up 
+walk_up * 2
+    
+}
+
+movement PlayerToTwinniAgain {
+
+walk_right * 4
+face_up 
+walk_up * 2
+face_left
+walk_left * 2
+    
+}
+
+script LiesingTown_EventScript_TriggerDontGo {
+    
+    playse (SE_PIN)
+    lockall
+    msgbox ("YOU CANT JUST GO!")
+    applymovement (OBJ_EVENT_ID_PLAYER,PlayerBlockedByTwinni)
+    waitmovement (OBJ_EVENT_ID_PLAYER)
+    closemessage
+    releaseall
+
+
+}
+
+movement PlayerBlockedByTwinni {
+
+walk_left
+    
+}
+
+script BagChooseStarterLiesingtown_EventScript {
+
+lockall
+setflag (FLAG_SYS_POKEMON_GET)
+fadescreen (FADE_TO_BLACK)
+removeobject (1)
+setflag (FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG)
+removeobject (6)
+setflag (FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE)
+special (ChooseStarter)
+special (HealPlayerParty)
+setvar (VAR_Liesingtown_State, 1)
+clearflag (FLAG_HIDE_MAP_NAME_POPUP)
+warp (MAP_LIESING_TOWN, 26, 11)
+waitstate
+releaseall
+end
+
+}
+
+script LiesingTown_EventScript_YouSavedTheKittens {
+lockall
+msgbox (format("We heard something in the alley when we saw those kittens being attacked."))
+waitmessage
+msgbox (format("But you saved those kittens.Thanks a lot!"))
+               waitmessage
+msgbox (format("So what is your name?"))
+                              waitmessage
+msgbox (format("This is my Sister Twinni and I am Yoshi. Nice to meet you!"))
+waitmessage
+closemessage
+msgbox (format("Yoshi: Thank you for helping us! "))
+msgbox (format("Twinni: And those kittens! "))
+msgbox (format("Yoshi: Here is a little reward for your heroic deed."))
+setvar (VAR_Liesingtown_State,2)
+applymovement (3,TwinniGiveRewardStarter)
+giveitem (ITEM_POKE_BALL,5)
+msgbox (format("My Sister and I will take care of the other two Kittens. See you around!"))
+setflag (FLAG_UNUSED_0x025)
+waitmessage
+closemessage
+releaseall
+end 
+
+}
+
+movement TwinniGiveRewardStarter {
+
+walk_down
+face_right
+    
+}
+
+script LiesingTown_EventScript_EntrySign {
+       lockall
+       msgbox ("Welcome to Liesingtown")
+       releaseall
+    }
+    
+script LiesingTown_EventScript_TwinniHouse {
+        lockall
+        msgbox ("This is Twinnis House")
+        releaseall
+        
+    }
+script LiesingTown_EventScript_YoshiHouse {
+    lockall 
+    msgbox ("This is Yoshis House")
+    releaseall
+}
+
+script LiesingTown_EventScript_OldWomanHouse {
+    lockall 
+    msgbox ("This is the Old womans House")
+    releaseall
+}
+
+script LiesingTown_EventScript_SomeoneHouse {
+    lockall 
+    msgbox ("This is someones House")
+    releaseall
+}
+
+script LiesingTown_EventScript_ShoeStore {
+    lockall 
+    msgbox ("Liesingtown Shoe Store")
+    releaseall
+}
+
+script LiesingTown_EventScript_OldWoman {
+    lockall 
+    msgbox ("Back in my day....")
+    releaseall
+}
+
+script LiesingTown_EventScript_WanderingGuy {
+    lockall 
+    msgbox ("Hey, don't talk to me!")
+    releaseall
+}
+
+script LiesingTown_EventScript_Shoes {
+
+    lockall
+    msgbox ("Do you want to pick up the dirty shoes?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+    setflag (FLAG_SYS_B_DASH)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("Recieved Running Shoes.")
+    removeobject(2)
+    setflag (FLAG_UNUSED_0x8E5)
+    releaseall
+    }
+    else {
+        msgbox ("Nah I don't need Running Shoes.")
+        releaseall
+    }
+}
+
+script LiesingTown_EventScript_ShoeGuyIntro {
+
+lockall
+playse (SE_PIN)
+playbgm (MUS_BIRCH_LAB, TRUE)
+applymovement (4,ShoeGuyIntroFacePlayer)
+waitmovement (4)
+msgbox (format("Yo, you must be new in town because with those shoes you certainly ain't one of us. Here let me show you where you can get some nice sneakers."))
+waitmessage
+closemessage
+setvar (VAR_Liesingtown_State,1)
+applymovement (4,ShoeGuyIntroToStore)
+applymovement (OBJ_EVENT_ID_PLAYER,PlayerIntroToStore)
+waitmovement (0)
+msgbox (format("This is it. The best shoe store in Liesingtown! Here you can buy th--- Did you hear that? It sounded like it was coming from over there by those children. It is better to ignore them... just go and buy some new shoes!"))
+waitmessage
+applymovement (4,ShoeGuyIntroFacePlayer)
+closemessage
+setvar (VAR_Liesingtown_State,0)
+releaseall
+
+
+
+}
+
+movement ShoeGuyIntroFacePlayer {
+
+face_player
+
+    
+}
+
+movement ShoeGuyIntroToStore {
+walk_up * 12   
+walk_left  * 4
+face_up
+}
+
+movement PlayerIntroToStore {
+
+walk_up * 14
+walk_left *2
+}
+
+script LiesingTown_EventScript_Whatarethose {
+
+lockall
+playse (SE_PIN)
+applymovement (5,WhatarethoseLady)
+msgbox (format("Old Lady: Yo, What are THOOOOOSE!! You can't be serious, get some real shoes before leaving or you will make this whole town look bad."))
+waitmessage
+closemessage
+applymovement (OBJ_EVENT_ID_PLAYER,Whatarethose)
+waitmovement (OBJ_EVENT_ID_PLAYER)
+releaseall
+}
+
+movement Whatarethose {
+
+walk_down * 2
+}
+
+movement WhatarethoseLady {
+
+face_player
+    
+}
+
+script LiesingTown_EventScript_ZigzagoonGrowl {
+    lockall 
+    msgbox ("Grrrrr.")
+    releaseall 
+    }

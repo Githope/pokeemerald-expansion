@@ -261,3 +261,138 @@ NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped:
 	.string "… … … … … … … …\p"
 	.string "The generator appears to have\n"
 	.string "stopped…$"
+
+NewMauville_Inside_EventScript_SachidLeaves::
+	playse SE_PIN
+	msgbox NewMauville_Inside_EventScript_SachidLeaves_Text_0
+	waitmessage
+	closemessage
+	setvar VAR_NEW_MAUVILLE_STATE, 1
+	fadescreen FADE_TO_BLACK
+	setflag FLAG_DEFEATED_VOLTORB_3_NEW_MAUVILLE
+	clearflag FLAG_DEFEATED_VOLTORB_2_NEW_MAUVILLE
+	removeobject 14
+	removeobject 10
+	fadescreen FADE_FROM_BLACK
+	return
+
+
+NewMauville_Inside_EventScript_HideEmployees::
+	setflag FLAG_HIDE_NEW_MAUVILLE_VOLTORB_2
+	return
+
+
+NewMauville_Inside_EventScript_MrBurns::
+	lockall
+	msgbox NewMauville_Inside_EventScript_MrBurns_Text_0
+	waitmessage
+	closemessage
+	msgbox NewMauville_Inside_EventScript_MrBurns_Text_1
+	waitmessage
+	closemessage
+	msgbox NewMauville_Inside_EventScript_MrBurns_Text_2
+	waitmessage
+	closemessage
+	releaseall
+	return
+
+
+NewMauville_Inside_EventScript_Lenny::
+	lockall
+	face_player
+	msgbox NewMauville_Inside_EventScript_Lenny_Text_0
+	waitmessage
+	closemessage
+	releaseall
+	return
+
+
+NewMauville_Inside_EventScript_Carl::
+	lockall
+	face_player
+	msgbox NewMauville_Inside_EventScript_Carl_Text_0
+	waitmessage
+	closemessage
+	releaseall
+	return
+
+
+NewMauville_Inside_EventScript_Homer::
+	lockall
+	face_player
+	msgbox NewMauville_Inside_EventScript_Homer_Text_0
+	waitmessage
+	closemessage
+	releaseall
+	return
+
+
+NewMauville_Inside_EventScript_Smithers::
+	lockall
+	face_player
+	msgbox NewMauville_Inside_EventScript_Smithers_Text_0
+	waitmessage
+	closemessage
+	msgbox NewMauville_Inside_EventScript_Smithers_Text_1
+	waitmessage
+	closemessage
+	face_left
+	msgbox NewMauville_Inside_EventScript_Smithers_Text_2
+	waitmessage
+	closemessage
+	releaseall
+	return
+
+
+NewMauville_Inside_EventScript_SachidLeaves_Text_0:
+	.string "They have initiated some sort of\n"
+	.string "lock-down protocol and closed off the\l"
+	.string "reactor room. GRRRR! I guess we are too\l"
+	.string "late for plan A ... If we can't get the\l"
+	.string "Pokémon to provide the power for us,\l"
+	.string "we'll just have to take one of those\l"
+	.string "Generators here and maybe steal an\l"
+	.string "Engine from that old ship up on Route\l"
+	.string "1114. I had hoped we wouldn't have to\l"
+	.string "face team Turbo so soon again... Pack it\l"
+	.string "up boys we got work to do.$"
+
+NewMauville_Inside_EventScript_MrBurns_Text_0:
+	.string "Mr. Burns: Smithers, are those rude men\n"
+	.string "gone?$"
+
+NewMauville_Inside_EventScript_MrBurns_Text_1:
+	.string "Smithers: It would appear they have all\n"
+	.string "decided to leave, sir.$"
+
+NewMauville_Inside_EventScript_MrBurns_Text_2:
+	.string "Excellent...$"
+
+NewMauville_Inside_EventScript_Lenny_Text_0:
+	.string "Lenny: Someone left the keys to the\n"
+	.string "security system outside .$"
+
+NewMauville_Inside_EventScript_Carl_Text_0:
+	.string "Carl: Usually security is pretty good\n"
+	.string "here, but I guess those goons had\l"
+	.string "access to our security system\l"
+	.string "somehow.$"
+
+NewMauville_Inside_EventScript_Homer_Text_0:
+	.string "Homer: Hmm... I don't know where my keys\n"
+	.string "and ID are. D'oh!$"
+
+NewMauville_Inside_EventScript_Smithers_Text_0:
+	.string "Smithers: Thank you for getting rid of\n"
+	.string "those goons. We cannot have random\l"
+	.string "people just jumping in and out of a\l"
+	.string "power plant whenever they want.$"
+
+NewMauville_Inside_EventScript_Smithers_Text_1:
+	.string "Mr. Burns: Smithers, stop talking to\n"
+	.string "that imbecile and bring me my ether to\l"
+	.string "inhale.$"
+
+NewMauville_Inside_EventScript_Smithers_Text_2:
+	.string "Smithers: Yes, sir. I have it right here,\n"
+	.string "sir.$"

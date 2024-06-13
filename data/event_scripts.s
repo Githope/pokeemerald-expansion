@@ -1059,3 +1059,221 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/LiesingTown/scripts.inc"
+
+	.include "data/maps/Route1101/scripts.inc"
+
+	.include "data/maps/Route1102/scripts.inc"
+
+	.include "data/maps/Route1103/scripts.inc"
+
+	.include "data/maps/AuhofStation/scripts.inc"
+
+	.include "data/maps/AuhofStation_RatHouse/scripts.inc"
+
+	.include "data/maps/Route1104/scripts.inc"
+
+	.include "data/maps/Route1105/scripts.inc"
+
+	.include "data/maps/FeueritenTown/scripts.inc"
+
+	.include "data/maps/RatHouse_Cellar/scripts.inc"
+
+	.include "data/maps/SafariZone_Orangerie/scripts.inc"
+
+	.include "data/maps/SafariZone_Lab/scripts.inc"
+
+	.include "data/maps/Route1106/scripts.inc"
+
+	.include "data/maps/LiesingTown_OldLadysHouse/scripts.inc"
+
+	.include "data/maps/LiesingTown_TwinniHouse/scripts.inc"
+
+	.include "data/maps/LiesingTown_YoshiHouse/scripts.inc"
+
+	.include "data/maps/LiesingTown_SomeoneHouse/scripts.inc"
+
+	.include "data/maps/LiesingTown_ShoeStore/scripts.inc"
+
+	.include "data/maps/IndoorFeueriten_Gym/scripts.inc"
+
+	.include "data/maps/Route1107/scripts.inc"
+
+	.include "data/maps/Erdberg/scripts.inc"
+
+	.include "data/maps/Route1108/scripts.inc"
+
+	.include "data/maps/IndoorDrachenberg_Gym/scripts.inc"
+
+	.include "data/maps/Route1109/scripts.inc"
+
+	.include "data/maps/AuhofStation_BigHouse/scripts.inc"
+
+	.include "data/maps/AuhofStation_MiddleHouse/scripts.inc"
+
+	.include "data/maps/AuhofStation_TravelHouse/scripts.inc"
+
+	.include "data/maps/AuhofStation_SmallHouse/scripts.inc"
+
+	.include "data/maps/Erdberg_GiftMonHouse/scripts.inc"
+
+	.include "data/maps/Arcadia/scripts.inc"
+
+	.include "data/maps/IndoorArcadia_School/scripts.inc"
+
+	.include "data/maps/FrostCave/scripts.inc"
+
+	.include "data/maps/DarkCaveDrache/scripts.inc"
+
+	.include "data/maps/FrostCaveUp1/scripts.inc"
+
+	.include "data/maps/Route1110/scripts.inc"
+
+	.include "data/maps/Moedling/scripts.inc"
+
+	.include "data/maps/Route1111/scripts.inc"
+
+	.include "data/maps/Route1112/scripts.inc"
+
+	.include "data/maps/Schwechport/scripts.inc"
+
+	.include "data/maps/Route1113/scripts.inc"
+
+	.include "data/maps/DonauIslands/scripts.inc"
+
+	.include "data/maps/FrostCaveUp2/scripts.inc"
+
+	.include "data/maps/IndoorSchwechPort_Gym/scripts.inc"
+
+	.include "data/maps/Route1114/scripts.inc"
+
+	.include "data/maps/Donau_Islands/scripts.inc"
+
+	.include "data/maps/IndoorDonauIslands_Gym/scripts.inc"
+
+	.include "data/maps/Route1115/scripts.inc"
+
+	.include "data/maps/Route1116/scripts.inc"
+
+	.include "data/maps/PraterTown/scripts.inc"
+
+	.include "data/maps/IndoorPraterTown_Gym/scripts.inc"
+
+	.include "data/maps/Route1120/scripts.inc"
+
+	.include "data/maps/Route1117/scripts.inc"
+
+	.include "data/maps/Route1118/scripts.inc"
+
+	.include "data/maps/Flodoville/scripts.inc"
+
+	.include "data/maps/Route1119/scripts.inc"
+
+	.include "data/maps/Cubetopia/scripts.inc"
+
+	.include "data/maps/IndoorMoedling_Gym/scripts.inc"
+
+	.include "data/maps/BikingTunnel/scripts.inc"
+
+	.include "data/maps/BikingTunnel2/scripts.inc"
+
+	.include "data/maps/BikingTunnelCyclingNorthEntrance/scripts.inc"
+
+	.include "data/maps/BikingTunnelCyclingSouthEntrance/scripts.inc"
+
+	.include "data/maps/MahiMahiCity/scripts.inc"
+
+	.include "data/maps/Route1121/scripts.inc"
+
+	.include "data/maps/IndoorPraterTown_Gym1B/scripts.inc"
+
+	.include "data/maps/IndoorRoute1116_FireStoneHouse/scripts.inc"
+
+	.include "data/maps/Route1122/scripts.inc"
+
+	.include "data/maps/LugnerCity/scripts.inc"
+
+	.include "data/maps/LugnerPalace/scripts.inc"
+
+	.include "data/maps/Route1123/scripts.inc"
+
+	.include "data/maps/Route1124/scripts.inc"
+
+	.include "data/maps/Route1125/scripts.inc"
+
+	.include "data/maps/PowerPlant/scripts.inc"
+
+	.include "data/maps/Route1126/scripts.inc"
+
+	.include "data/maps/Route1127/scripts.inc"
+
+	.include "data/maps/Route1128/scripts.inc"
+
+	.include "data/maps/Route1129/scripts.inc"
+
+	.include "data/maps/Route1130/scripts.inc"
+
+	.include "data/maps/PernHarbor/scripts.inc"
+
+	.include "data/maps/Route1131/scripts.inc"
+
+	.include "data/maps/IndoorCubetopia_Gym/scripts.inc"
+
+	.include "data/maps/IndoorMahiMahiCity_Gym/scripts.inc"
+
+	.include "data/maps/MtLaa/scripts.inc"
+
+	.include "data/maps/InnahCity/scripts.inc"
+
+	.include "data/maps/Route1132/scripts.inc"
+
+	.include "data/maps/Route1133/scripts.inc"
+
+	.include "data/maps/Route1134/scripts.inc"
+
+	.include "data/maps/Route1135/scripts.inc"
+
+	.include "data/maps/Route1136/scripts.inc"
+
+	.include "data/maps/IndoorCubeTopia_ContestHall/scripts.inc"
+
+	.include "data/maps/SpectreHideout_1F/scripts.inc"
+
+	.include "data/maps/SpectreHideout_2F/scripts.inc"
+
+	.include "data/maps/SpectreHideout_3F/scripts.inc"
+
+	.include "data/maps/DarkCaveDrachePlateu/scripts.inc"
+
+	.include "data/maps/LobauCave_1F/scripts.inc"
+
+	.include "data/maps/LobauCave_2F/scripts.inc"
+
+	.include "data/maps/MtLaaCave/scripts.inc"
+
+	.include "data/maps/PernCave/scripts.inc"
+
+	.include "data/maps/DesertCave_1/scripts.inc"
+
+	.include "data/maps/DesertCave_2/scripts.inc"
+
+	.include "data/maps/DesertCave_3/scripts.inc"
+
+	.include "data/maps/PernCave_2/scripts.inc"
+
+	.include "data/maps/DesertTemple_1F/scripts.inc"
+
+	.include "data/maps/FossilCave_Left_1F/scripts.inc"
+
+	.include "data/maps/GR_VictoryRoad_Main_Hall/scripts.inc"
+
+	.include "data/maps/DeserTemple_2F/scripts.inc"
+
+	.include "data/maps/DesertCave_4/scripts.inc"
+
+	.include "data/maps/GR_VictoryRoad_Top/scripts.inc"
+
+	.include "data/maps/IndoorSchwchPort_FlyBar/scripts.inc"
+
+	.include "data/maps/IndoorLiesingTown_SimonHouse/scripts.inc"

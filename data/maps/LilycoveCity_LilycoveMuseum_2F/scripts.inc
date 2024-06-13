@@ -178,8 +178,61 @@ LilycoveCity_LilycoveMuseum_2F_EventScript_ExpertM::
 	end
 
 LilycoveCity_LilycoveMuseum_2F_EventScript_RichBoy::
-	msgbox LilycoveCity_LilycoveMuseum_2F_Text_ThesePaintingsOfYourPokemon, MSGBOX_NPC
+	
+	msgbox LilycoveCity_LilycoveMuseum_2F_Text_ThesePaintingsOfYourPokemon, MSGBOX_YESNO
+	waitmessage
+
 	end
+
+
+LilycoveCity_LilyCoveMuseum_2F__EventScript_PaydayTutor::
+	lock
+	faceplayer
+	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_SWAGGER, MoveTutor_EventScript_PaydayTaught
+	msgbox MoveTutor_Text_PaydayTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_PaydayDeclined
+	call MoveTutor_EventScript_CanOnlyBeLearnedOnce
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_PaydayDeclined
+	msgbox MoveTutor_Text_PaydayWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_PAY_DAY
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_PaydayDeclined
+	setflag FLAG_MOVE_TUTOR_TAUGHT_SWAGGER
+	goto MoveTutor_EventScript_PaydayTaught
+	end
+
+	
+MoveTutor_Text_PaydayWhichMon:
+	.string "All right, which POKéMON wants to\n"
+	.string "learn how to PAYDAY?$"
+
+MoveTutor_Text_PaydayTeach:
+	.string "Heh! I am really rich!\n"
+	.string "My Pokémon makes me a lot of money!\p"
+	.string "Uh, dayum, get Money, Bitch\n"
+	.string "Yeah rich, rich.\l"
+	.string "I am rich.\p"
+	.string "Yeah rich, rich.\p"
+	.string "If you'd like, I'll teach the move\n"
+	.string "Payday to a POKéMON of yours.$"
+
+MoveTutor_EventScript_PaydayTaught::
+	msgbox MoveTutor_Text_PaydayTaught, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_PaydayTaught:
+	.string "I hope you don't overwork your\n"
+	.string "Pokémon. Give them some rest.$"
+
+MoveTutor_EventScript_PaydayDeclined::
+	msgbox MoveTutor_Text_PaydayDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_PaydayDeclined:
+	.string "What, no? Can't you get into\n"
+	.string "the spirit of things?$"
 
 LilycoveCity_LilycoveMuseum_2F_EventScript_ShowCoolPainting::
 	msgbox LilycoveCity_LilycoveMuseum_2F_Text_ItsPaintingOfPokemon, MSGBOX_SIGN
@@ -323,8 +376,8 @@ LilycoveCity_LilycoveMuseum_2F_Text_NewPaintingsRatherAmusing:
 	.string "rather amusing.$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_ThesePaintingsOfYourPokemon:
-	.string "Wow, is that right?\n"
-	.string "These paintings are of your POKéMON.\p"
-	.string "Isn't that just the ultimate joy for\n"
-	.string "a TRAINER?$"
+	.string "Wow, these paintings are expensive?\n"
+	.string "Good thing I know of a move that can\p"
+	.string "help. Payday! My Pokémon love it!\n"
+	.string "Do you want me to teach you?$"
 

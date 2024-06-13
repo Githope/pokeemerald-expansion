@@ -1,0 +1,41 @@
+mapscripts PowerPlant_MapScripts {}
+
+script PowerPlant_EventScripts_PlantBlockGuy {
+lockall
+checkflag (FLAG_RECEIVED_TM34)
+if (flag(FLAG_RECEIVED_TM34)) {
+trainerbattle_single (TRAINER_CLARISSA, PlantBlockGuyIntro ,PlantBlockGuyDefeated)
+msgbox (format("I guess you know that we are not allowed to be here... I guess I should tell the others our cover is blown."))
+waitmessage
+closemessage
+applymovement (3,PlantBlockGuyLeaves)
+fadescreen (FADE_TO_BLACK)
+setflag (FLAG_UNUSED_0x023)
+removeobject (3)
+fadescreen (FADE_FROM_BLACK)
+releaseall
+}
+
+else {
+
+msgbox (format("Go away kid we got the permission of Schwechports Gym Leader to be here. Now beat it!"))
+waitmessage
+closemessage
+releaseall
+
+}
+    
+}
+
+text PlantBlockGuyIntro {
+format("Hey, this is a restricted area. You Cannot be here!")
+}
+
+text PlantBlockGuyDefeated {
+"Okay, I guess you figured it out..."
+}
+
+movement PlantBlockGuyLeaves {
+walk_fast_up * 2    
+}
+

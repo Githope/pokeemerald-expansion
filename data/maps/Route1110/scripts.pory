@@ -1,0 +1,44 @@
+mapscripts Route1110_MapScripts { }
+
+script Route1110_EventScript_WailmerPailTreeSudowoodo {
+    checkitem (ITEM_WAILMER_PAIL) 
+    if (var(VAR_RESULT) == YES) {
+        lockall
+        msgbox ("This tree looks weird.")
+        waitmessage
+        msgbox ("Do you want to Water it?", MSGBOX_YESNO)
+        waitmessage
+        closemessage
+        if (var(VAR_RESULT) == YES) {
+        waitse
+	    playse (SE_SUDOWOODO_SHAKE)
+        playmoncry (SPECIES_SUDOWOODO, CRY_MODE_ENCOUNTER)
+        setwildbattle (SPECIES_SUDOWOODO, 25)
+        dowildbattle
+        removeobject (2)
+        setflag (FLAG_DEFEATED_SUDOWOODO)
+        goto (Common_EventScript_RemoveStaticPokemon)
+        releaseall
+        end
+        
+
+        }
+        else {
+        msgbox ("You do not want to disturb nature.")
+        waitmessage
+        closemessage
+        releaseall
+
+        }
+
+    }
+    else {
+        msgbox ("This tree looks weird...")
+        waitmessage
+        msgbox ("Maybe if I had something to water it with...")
+        waitmessage
+        closemessage
+        releaseall
+    }
+
+    }

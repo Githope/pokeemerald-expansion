@@ -41,20 +41,20 @@
 #define FLAG_TEMP_1F     (TEMP_FLAGS_START + 0x1F)
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
+#define FLAG_UNUSED_0x020    0x20 // Unused Flag --- USED IN SAFARI ZONE ORANGERIE TO REMOVE BIKERS ON Route_1104
+#define FLAG_UNUSED_0x021    0x21 // Unused Flag --- USED IN ERDBERG FOR TTandSClash
+#define FLAG_UNUSED_0x022    0x22 // Unused Flag ---- USED FOR CUT IN PRATERTOWN
+#define FLAG_UNUSED_0x023    0x23 // Unused Flag ---- USED FOR POWERPLANT BLOCK GUY
+#define FLAG_UNUSED_0x024    0x24 // Unused Flag ----- USED FOR CUBETOPIA
+#define FLAG_UNUSED_0x025    0x25 // Unused Flag ----- USED FOR TUTORIAL DESPAWN TWINS
+#define FLAG_UNUSED_0x026    0x26 // Unused Flag ----- USED FOR STEELWING TM IN ARCADIA
+#define FLAG_UNUSED_0x027    0x27 // Unused Flag ----- USED FOR TWOSHI RIVAL FIGHT ROUTE 1120
+#define FLAG_UNUSED_0x028    0x28 // Unused Flag ----- USED FOR FLY BAR BATTLES
+#define FLAG_UNUSED_0x029    0x29 // Unused Flag ----- USED FOR KECLEON GAME IN DONAU GYM
+#define FLAG_UNUSED_0x02A    0x2A // Unused Flag ----- USED FOR KECLEON GAME IN DONAU GYM
+#define FLAG_UNUSED_0x02B    0x2B // Unused Flag ----- USED FOR KECLEON GAME IN DONAU GYM
+#define FLAG_UNUSED_0x02C    0x2C // Unused Flag ----- USED FOR KECLEON GAME IN DONAU GYM
+#define FLAG_UNUSED_0x02D    0x2D // Unused Flag ----- USED FOR KECLEON GAME IN DONAU GYM
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
@@ -1501,7 +1501,7 @@
 
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 
-#define FLAG_UNUSED_0x8E5                           (SYSTEM_FLAGS + 0x85) // Unused Flag
+#define FLAG_UNUSED_0x8E5                           (SYSTEM_FLAGS + 0x85) // Unused Flag ---
 #define FLAG_UNUSED_0x8E6                           (SYSTEM_FLAGS + 0x86) // Unused Flag
 #define FLAG_UNUSED_0x8E7                           (SYSTEM_FLAGS + 0x87) // Unused Flag
 #define FLAG_UNUSED_0x8E8                           (SYSTEM_FLAGS + 0x88) // Unused Flag

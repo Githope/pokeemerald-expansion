@@ -67,7 +67,7 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
 	setflag FLAG_BADGE04_GET
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
-	setvar VAR_0x8008, 4
+	setvar VAR_0x8008, 5
 	call Common_EventScript_SetGymTrainers
 	setflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY
 	setvar VAR_LAVARIDGE_TOWN_STATE, 1
@@ -84,7 +84,7 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
 	end
 
 LavaridgeTown_Gym_1F_EventScript_GiveOverheat2::
-	giveitem ITEM_TM50
+	giveitem ITEM_TM51
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox LavaridgeTown_Gym_1F_Text_ExplainOverheat, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM50
@@ -92,7 +92,7 @@ LavaridgeTown_Gym_1F_EventScript_GiveOverheat2::
 	end
 
 LavaridgeTown_Gym_1F_EventScript_GiveOverheat::
-	giveitem ITEM_TM50
+	giveitem ITEM_TM51
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
 	msgbox LavaridgeTown_Gym_1F_Text_ExplainOverheat, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM50
@@ -188,13 +188,13 @@ LavaridgeTown_Gym_1F_EventScript_GymStatue::
 LavaridgeTown_Gym_1F_Text_GymGuideAdvice:
 	.string "Hey, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
-	.string "LAVARIDGE's GYM LEADER FLANNERY\n"
-	.string "uses FIRE-type POKéMON.\p"
-	.string "Her passion for POKéMON burns stronger\n"
-	.string "and hotter than a volcano.\p"
-	.string "Don't get too close to her--you'll burn!\n"
-	.string "Hose her down with water and then\l"
-	.string "go for it!$"
+	.string "Donau Islands's GYM LEADER KEVIN\n"
+	.string "uses BUG-type POKéMON.\p"
+	.string "His passion for POKéMON chirps with\n"
+	.string "a resounding echo through the gym!\p"
+	.string "And it doesn't stop there.\n"
+	.string "He will protect Pokémon even\l"
+	.string "outside of this town!$"
 
 LavaridgeTown_Gym_1F_Text_GymGuidePostVictory:
 	.string "Yow! That was a scorching-hot battle!$"
@@ -304,38 +304,38 @@ LavaridgeTown_Gym_B1F_Text_EliPostBattle:
 	.string "Hehehehe.$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryIntro:
-	.string "Welcome… No, wait.\p"
+	.string "Skurr Skrrr.\p"
 	.string "Puny TRAINER, how good to see you've\n"
 	.string "made it here!\p"
-	.string "I have been entrusted with the…\n"
-	.string "No, wait.\p"
-	.string "I am FLANNERY, and I'm the GYM\n"
-	.string "LEADER here!\p"
-	.string "Uh…\n"
-	.string "Dare not underestimate me, though\l"
-	.string "I have been LEADER only a short time!\p"
-	.string "With skills inherited from my grand-\n"
-	.string "father, I shall, uh…demonstrate the\l"
-	.string "hot moves we have honed on this land!$"
+	.string "I am the Leader of this gym!\n"
+	.string "The DONAU ISLANDS GYM!\p"
+	.string "I am Kevin, and I will show\n"
+	.string "you that !\p"
+	.string "So...\n"
+	.string "Can you show me that you treat\l"
+	.string "your Pokémon with respect and love?\p"
+	.string "Pokémon battles are meant to be as\n"
+	.string "fun for the Pokémon as for us!\l"
+	.string "So show me how you raised yours!$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryDefeat:
-	.string "Oh…\n"
-	.string "I guess I was trying too hard…\p"
-	.string "I… I've only recently become\n"
-	.string "a GYM LEADER.\p"
-	.string "I tried too hard to be someone\n"
-	.string "I'm not.\p"
-	.string "I have to do things my natural way. If\n"
-	.string "I don't, my POKéMON will be confused.\p"
-	.string "Thanks for teaching me that.\n"
+	.string "Shitmatch...\n"
+	.string "I guess you have shown that you\p"
+	.string "take good care of your Pokémon\n"
+	.string "by defeating a GYM LEADER.\p"
+	.string "Wait weren't you the trainer\n"
+	.string "I talked to at the Zoo?\p"
+	.string "I knew I recognized you from somewhere.\n"
+	.string "I saw that I can trust you there to\p"
+	.string "keep Team Turbo in check.\n"
 	.string "For that, you deserve this.$"
 
 LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge:
-	.string "{PLAYER} received the HEAT BADGE\n"
-	.string "from FLANNERY.$"
+	.string "{PLAYER} received the INSECT BADGE\n"
+	.string "from KEVIN.$"
 
 LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis:
-	.string "If you have a HEAT BADGE, all POKéMON\n"
+	.string "If you have a INSECT BADGE, all POKéMON\n"
 	.string "up to Level 50, even those you get in\l"
 	.string "trades from other people, will obey\l"
 	.string "you completely.\p"
@@ -345,21 +345,21 @@ LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis:
 	.string "Don't be shy about taking it!$"
 
 LavaridgeTown_Gym_1F_Text_ExplainOverheat:
-	.string "That TM50 contains OVERHEAT.\p"
-	.string "That move inflicts serious damage on\n"
+	.string "That TM51 contains SILVER WIND.\p"
+	.string "That move inflicts moderate damage on\n"
 	.string "the opponent.\p"
-	.string "But it also sharply cuts the SP. ATK\n"
-	.string "of the POKéMON using it. It might not\l"
-	.string "be suitable for longer battles.$"
+	.string "But it also has a chance to increase\n"
+	.string "all stats of the POKéMON using it. \l"
+	.string "It is great for longer battles.$"
 
 LavaridgeTown_Gym_1F_Text_RegisteredFlannery:
-	.string "Registered GYM LEADER FLANNERY\n"
+	.string "Registered GYM LEADER KEVIN\n"
 	.string "in the POKéNAV.$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryPostBattle:
-	.string "Your power reminds me of someone…\p"
-	.string "Oh! I know! You battle like NORMAN,\n"
-	.string "the GYM LEADER of PETALBURG.$"
+	.string "Did you know that Bulbasaur is \p"
+	.string "capable of standing on its rear\n"
+	.string "legs until it evolves? Wowzer!$"
 
 LavaridgeTown_Gym_1F_Text_GymStatue:
 	.string "LAVARIDGE TOWN POKéMON GYM$"
@@ -370,7 +370,7 @@ LavaridgeTown_Gym_1F_Text_GymStatueCertified:
 	.string "{PLAYER}$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryPreRematch:
-	.string "FLANNERY: Losing a battle isn't going\n"
+	.string "KEVIN: Losing a battle isn't going\n"
 	.string "to deflate me.\p"
 	.string "I love POKéMON.\n"
 	.string "I love to battle.\l"
@@ -383,7 +383,7 @@ LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat:
 	.string "On the verge of eruption!$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryPostRematch:
-	.string "FLANNERY: I lost the match,\n"
+	.string "KEVIN: I lost the match,\n"
 	.string "but I'm completely satisfied.\p"
 	.string "It's not often I get to enjoy a battle\n"
 	.string "this heated.\p"

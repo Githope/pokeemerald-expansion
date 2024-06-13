@@ -193,7 +193,7 @@ MauvilleCity_BikeShop_Text_GuessYouDontNeedBike:
 MauvilleCity_BikeShop_Text_ExplainBikesChooseWhichOne:
 	.string "RYDEL: Hm, hm… … … … …\p"
 	.string "You're saying that you came all this\n"
-	.string "way from LITTLEROOT?\p"
+	.string "way from LIESINGTOWN?\p"
 	.string "My goodness!\n"
 	.string "That's ridiculously far!\p"
 	.string "If you had one of my BIKES, you could\n"
@@ -225,12 +225,12 @@ MauvilleCity_BikeShop_Text_ComeBackToSwitchBikes:
 	.string "BIKES, just come see me!$"
 
 MauvilleCity_BikeShop_Text_WantToSwitchBikes:
-	.string "RYDEL: Oh? Were you thinking about\n"
+	.string "Oh? Were you thinking about\n"
 	.string "switching BIKES?$"
 
 MauvilleCity_BikeShop_Text_IllSwitchBikes:
-	.string "RYDEL: Okay, no problem!\n"
-	.string "I'll switch BIKES for you!$"
+	.string "Okay, no problem!\n"
+	.string "I'll just take this one!$"
 
 MauvilleCity_BikeShop_Text_ExchangedMachForAcro:
 	.string "{PLAYER} got the MACH BIKE exchanged\n"
@@ -241,8 +241,8 @@ MauvilleCity_BikeShop_Text_ExchangedAcroForMach:
 	.string "for a MACH BIKE.$"
 
 MauvilleCity_BikeShop_Text_HappyYouLikeIt:
-	.string "RYDEL: Good, good!\n"
-	.string "I'm happy that you like it!$"
+	.string "Good, good!\n"
+	.string "This one looks better!$"
 
 MauvilleCity_BikeShop_Text_OhYourBikeIsInPC:
 	.string "Oh? What happened to that BIKE\n"

@@ -3275,8 +3275,10 @@ static const u8 sTM50Desc[] = _(
     "attack, but sharply\n"
     "lowers Sp. Atk.");
 
-static const u8 sTM51Desc[] = _( // Todo
-    "?????");
+static const u8 sTM51Desc[] = _( 
+    "The foe is attacked\n "
+    "with a silver dust.\n "
+    "May raise all stats.");
 
 static const u8 sTM52Desc[] = _( // Todo
     "?????");
@@ -3350,8 +3352,10 @@ static const u8 sTM74Desc[] = _( // Todo
 static const u8 sTM75Desc[] = _( // Todo
     "?????");
 
-static const u8 sTM76Desc[] = _( // Todo
-    "?????");
+static const u8 sTM76Desc[] = _( 
+    "The user picks up\n" 
+    "and throws a small\n"
+    "rocks at the target. ");
 
 static const u8 sTM77Desc[] = _( // Todo
     "?????");
@@ -3912,3 +3916,9 @@ static const u8 sBerserkGene[] = _(
     "Sharply boosts\n"
     "Attack, but causes\n"
     "lasting confusion.");
+
+static const u8 sKatanaDesc[] = _(
+    "Rami's Sword\n"
+    "The blade is sharp. It\n"
+    "can cut through trees.");
+

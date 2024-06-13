@@ -375,22 +375,22 @@ Route110_EventScript_RivalTrigger3::
 
 Route110_EventScript_RivalScene::
 	lockall
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route110_EventScript_PlayMayMusic
-	call_if_eq VAR_RESULT, FEMALE, Route110_EventScript_PlayBrendanMusic
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterDown
+	applymovement 4, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
+	applymovement 4, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
+	applymovement 4, Common_Movement_Delay48
 	waitmovement 0
 	delay 30
 	call_if_eq VAR_0x8008, 1, Route110_EventScript_RivalApproachPlayer1
-	call_if_eq VAR_0x8008, 2, Route110_EventScript_RivalApproachPlayer2
+	call_if_eq VAR_0x8008, 1, Route110_EventScript_RivalApproachPlayer2
 	call_if_eq VAR_0x8008, 3, Route110_EventScript_RivalApproachPlayer3
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, Route110_EventScript_MayBattle
-	goto_if_eq VAR_RESULT, FEMALE, Route110_EventScript_BrendanBattle
+	msgbox Route110_Text_TwinniGreeting
+	msgbox Route110_Text_YoshiChoose, MSGBOX_YESNO
+	waitmessage
+	goto_if_eq VAR_RESULT, YES, Route110_EventScript_MayBattle
+	goto_if_eq VAR_RESULT, NO, Route110_EventScript_BrendanBattle
+	setflag FLAG_RIVAL_LEFT_FOR_ROUTE103
 	releaseall
 	end
 
@@ -401,6 +401,11 @@ Route110_EventScript_PlayMayMusic::
 Route110_EventScript_PlayBrendanMusic::
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
 	return
+
+Route110_Text_TwinniGreeting::
+ 	.string "So… How about a little battle?\n"
+	.string "You can choose.\p"
+	.string "Do you want to fight Twinni or me?$"
 
 Route110_EventScript_MayBattle::
 	msgbox Route110_Text_MayLetsBattle, MSGBOX_DEFAULT
@@ -463,7 +468,7 @@ Route110_EventScript_BrendanDefeated::
 	end
 
 Route110_EventScript_GiveItemfinder::
-	giveitem ITEM_DOWSING_MACHINE
+	giveitem ITEM_SILK_SCARF
 	return
 
 Route110_EventScript_RivalExit::
@@ -471,15 +476,15 @@ Route110_EventScript_RivalExit::
 	call_if_eq VAR_0x8008, 1, Route110_EventScript_MoveRival1
 	call_if_eq VAR_0x8008, 2, Route110_EventScript_MoveRival2
 	call_if_eq VAR_0x8008, 3, Route110_EventScript_MoveRival3
-	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_FACE_RIGHT
-	setobjectmovementtype LOCALID_RIVAL_ON_BIKE, MOVEMENT_TYPE_FACE_RIGHT
-	removeobject LOCALID_RIVAL
-	addobject LOCALID_RIVAL_ON_BIKE
+	setobjectmovementtype 4, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectmovementtype 5, MOVEMENT_TYPE_FACE_RIGHT
+	
 	delay 45
 	call_if_eq VAR_0x8008, 1, Route110_EventScript_RivalExit1
-	call_if_eq VAR_0x8008, 2, Route110_EventScript_RivalExit2
+	call_if_eq VAR_0x8008, 1, Route110_EventScript_RivalExit2
 	call_if_eq VAR_0x8008, 3, Route110_EventScript_RivalExit3
-	removeobject LOCALID_RIVAL_ON_BIKE
+	removeobject 4
+	removeobject 5
 	setvar VAR_ROUTE110_STATE, 1
 	savebgm MUS_DUMMY
 	fadedefaultbgm
@@ -487,56 +492,62 @@ Route110_EventScript_RivalExit::
 	end
 
 Route110_EventScript_RivalApproachPlayer1::
-	applymovement LOCALID_RIVAL, Route110_Movement_RivalApproachPlayer1
-	waitmovement 0
+	applymovement 4, Route110_Movement_RivalApproachPlayer1
 	return
 
 Route110_EventScript_RivalApproachPlayer2::
-	applymovement LOCALID_RIVAL, Route110_Movement_RivalApproachPlayer2
+	applymovement 5, Route110_Movement_RivalApproachPlayer2
 	waitmovement 0
 	return
 
 Route110_EventScript_RivalApproachPlayer3::
-	applymovement LOCALID_RIVAL, Route110_Movement_RivalApproachPlayer3
+	applymovement 4, Route110_Movement_RivalApproachPlayer3
 	waitmovement 0
 	return
 
 Route110_EventScript_RivalExit1::
-	applymovement LOCALID_RIVAL_ON_BIKE, Route110_Movement_RivalExit1
-	waitmovement 0
+	applymovement 4, Route110_Movement_RivalExit1
 	return
 
 Route110_EventScript_RivalExit2::
-	applymovement LOCALID_RIVAL_ON_BIKE, Route110_Movement_RivalExit2
+	applymovement 5, Route110_Movement_RivalExit2
 	waitmovement 0
 	return
 
 Route110_EventScript_RivalExit3::
-	applymovement LOCALID_RIVAL_ON_BIKE, Route110_Movement_RivalExit3
+	applymovement 4, Route110_Movement_RivalExit3
 	waitmovement 0
 	return
 
 Route110_EventScript_MoveRival1::
-	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 33, 55
+	setobjectxyperm 4, 33, 55
+	return
+	setobjectxyperm 5, 33, 55
 	return
 
 Route110_EventScript_MoveRival2::
-	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 34, 55
+	setobjectxyperm 5, 34, 55
 	return
 
 Route110_EventScript_MoveRival3::
-	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 35, 55
+	setobjectxyperm 4, 35, 55
 	return
 
 Route110_Movement_RivalApproachPlayer1:
-	walk_down
 	walk_left
-	walk_in_place_faster_down
+	walk_left
+	walk_up
+	walk_in_place_faster_up
 	step_end
 
 Route110_Movement_RivalApproachPlayer2:
-	walk_down
+	walk_left 
+	walk_left 
+	walk_left 
+	walk_fast_up
+	walk_fast_up
 	step_end
+
 
 Route110_Movement_RivalApproachPlayer3:
 	walk_down
@@ -545,24 +556,29 @@ Route110_Movement_RivalApproachPlayer3:
 	step_end
 
 Route110_Movement_RivalExit1:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 Route110_Movement_RivalExit2:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 Route110_Movement_RivalExit3:
@@ -760,11 +776,13 @@ Route110_Text_AquaActionsBringSmiles:
 	.string "smiles to people's faces!$"
 
 Route110_Text_MayLetsBattle:
-	.string "MAY: Hi, {PLAYER}{KUN}, long time no see!\p"
+	.string "Twinni: Ok, good choice! Get ready!\p"
 	.string "While I was searching for other\n"
-	.string "POKéMON, my POKéMON grew stronger.\p"
-	.string "So…\n"
-	.string "How about a little battle?$"
+	.string "POKéMON, my POKéMON grew stronger.$"
+
+Route110_Text_YoshiChoose:
+	.string "Twinni: That sounds fun!\n"
+	.string "Twinni: Do you want a battle versus me?$"
 
 Route110_Text_MayDefeated:
 	.string "Yikes!\n"
@@ -777,18 +795,18 @@ Route110_Text_MayTakeThis:
 	.string "This is from me!$"
 
 Route110_Text_MayExplainItemfinder:
-	.string "MAY: That's an ITEMFINDER.\p"
-	.string "Try it out. If there is an item that's\n"
-	.string "not visible, it emits a sound.\p"
-	.string "Okay, {PLAYER}{KUN}, let's meet again!\p"
-	.string "I know it's a little silly coming from\n"
-	.string "me, but I think you should train a lot\l"
-	.string "harder for the next time.$"
+	.string "Twinni: That's a SILK SCARF.\p"
+	.string "It boosts the power of\n"
+	.string "Normal-type moves.\p"
+	.string "Our Kittens loved to play \n"
+	.string "with this scarf.\p"
+	.string "Anyway, we are off throw rocks\n"
+	.string "at this fat mans house. Hihihi. .$"
 
 Route110_Text_BrendanLetsBattle:
-	.string "BRENDAN: Hey, {PLAYER}.\n"
-	.string "So this is where you were.\l"
-	.string "How's it going?\p"
+	.string "Yoshi: Hey, {PLAYER}.\n"
+	.string "Ok, good choice! Get ready!.\l"
+	.string "I trained a lot since last time.\p"
 	.string "Have you been raising your POKéMON?\n"
 	.string "I'll check for you.$"
 
@@ -797,19 +815,19 @@ Route110_Text_BrendanDefeated:
 	.string "You're pretty good.$"
 
 Route110_Text_BrendanTakeThis:
-	.string "BRENDAN: {PLAYER}, you've trained\n"
+	.string "Yoshi: {PLAYER}, you've trained\n"
 	.string "without me noticing…\p"
 	.string "Good enough!\n"
 	.string "Here, take this.$"
 
 Route110_Text_BrendanExplainItemfinder:
-	.string "BRENDAN: That's an ITEMFINDER.\p"
-	.string "Use it to root around for items that\n"
-	.string "aren't visible.\p"
-	.string "If it senses something, it emits\n"
-	.string "a sound.\p"
-	.string "Anyway, I'm off to look for new\n"
-	.string "POKéMON.$"
+	.string "Yoshi: That's a SILK SCARF.\p"
+	.string "It boosts the power of\n"
+	.string "Normal-type moves.\p"
+	.string "Our Kittens loved to play \n"
+	.string "with this scarf.\p"
+	.string "Anyway, we are off to look for\n"
+	.string "new POKéMON.$"
 
 Route110_Text_RideBikeAtFullSpeed:
 	.string "Wouldn't it be great to ride a BIKE\n"

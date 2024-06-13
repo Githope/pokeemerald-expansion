@@ -1,0 +1,25 @@
+
+mapscripts SafariZone_Lab_MapScripts { }
+
+script SafariZone_Lab_EventScript_ProfExpShare {
+
+lockall
+msgbox (format("We are always working on new"
+               "cutting-edge Pokémon Technologies"))
+waitmessage
+closemessage
+msgbox ("Here, try this.")
+waitmessage
+closemessage
+giveitem (ITEM_EXP_SHARE)
+msgbox ("You received an EXP-Share.")
+waitmessage
+closemessage
+msgbox (format("The EXP-Share helps your Pokémon to grow"
+               "stronger together by sharing their battle EXP."))
+waitmessage
+closemessage
+releaseall
+    
+}
+

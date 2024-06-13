@@ -973,7 +973,6 @@ LilycoveCity_ContestLobby_EventScript_LittleGirl::
 	lock
 	faceplayer
 	goto_if_set FLAG_RECEIVED_POKEBLOCK_CASE, LilycoveCity_ContestLobby_EventScript_LittleGirlHaveCase
-	msgbox LilycoveCity_ContestLobby_Text_LadyGaveMePokeblockCase, MSGBOX_DEFAULT
 	release
 	end
 

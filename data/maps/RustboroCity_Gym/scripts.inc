@@ -26,7 +26,7 @@ RustboroCity_Gym_EventScript_RoxanneDefeated::
 	end
 
 RustboroCity_Gym_EventScript_GiveRockTomb::
-	giveitem ITEM_TM39
+	giveitem ITEM_TM11
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_TM39
 	msgbox RustboroCity_Gym_Text_ExplainRockTomb, MSGBOX_DEFAULT
@@ -116,11 +116,11 @@ RustboroCity_Gym_Text_GymGuideAdvice:
 	.string "But GYM LEADERS aren't pushovers!\p"
 	.string "And that's where I come in!\n"
 	.string "I'm here to provide expert advice!\p"
-	.string "ROXANNE, the GYM LEADER, is a user\n"
-	.string "of ROCK-type POKéMON.\p"
-	.string "The ROCK type is very durable, but\n"
-	.string "it can't stand WATER-type and\l"
-	.string "GRASS-type moves.\p"
+	.string "DAVE, the GYM LEADER, is a user\n"
+	.string "of FIRE-type POKéMON.\p"
+	.string "The FIRE type is very hot.\n"
+	.string "His strongest Pokémon is level\l"
+	.string "15.\p"
 	.string "Come see me afterwards, if you beat\n"
 	.string "the GYM LEADER.\p"
 	.string "Well, go for it!$"
@@ -130,12 +130,12 @@ RustboroCity_Gym_Text_GymGuidePostVictory:
 	.string "My cheering must've worked!\p"
 	.string "Great!\n"
 	.string "Check your TRAINER CARD.\p"
-	.string "The STONE BADGE you got should be\n"
+	.string "The FIRE BADGE you got should be\n"
 	.string "properly recorded on it.\p"
-	.string "In other words…\p"
-	.string "You've climbed the first step on\n"
-	.string "the stairs to the CHAMPIONSHIP!\p"
-	.string "That's got to feel awesome!$"
+	.string "I'll give you a small hint!\p"
+	.string "The next gym leader has....\n"
+	.string "a Level 21 Ace-Pokémon!\p"
+	.string "So be prepared! You can do it!$"
 
 RustboroCity_Gym_Text_JoshIntro:
 	.string "Don't take us GYM TRAINERS lightly!\n"
@@ -176,7 +176,7 @@ RustboroCity_Gym_Text_MarcPostBattle:
 	.string "pick the ROCK type at her young age.$"
 
 RustboroCity_Gym_Text_RoxanneIntro:
-	.string "Hello, I am ROXANNE, the RUSTBORO\n"
+	.string "Hello, I am DAVE, the FEUERITEN\n"
 	.string "POKéMON GYM LEADER.\p"
 	.string "I became a GYM LEADER so that I might\n"
 	.string "apply what I learned at the POKéMON\l"
@@ -194,28 +194,28 @@ RustboroCity_Gym_Text_RoxanneDefeat:
 	.string "that TRAINERS are to be given this\l"
 	.string "if they defeat a GYM LEADER.\p"
 	.string "Please accept the official POKéMON\n"
-	.string "LEAGUE STONE BADGE.$"
+	.string "LEAGUE FIRE BADGE.$"
 
 RustboroCity_Gym_Text_ReceivedStoneBadge:
-	.string "{PLAYER} received the STONE BADGE\n"
+	.string "{PLAYER} received the FIRE BADGE\n"
 	.string "from ROXANNE.$"
 
 RustboroCity_Gym_Text_StoneBadgeInfoTakeThis:
-	.string "The STONE BADGE heightens the ATTACK\n"
+	.string "The FIRE BADGE heightens the ATTACK\n"
 	.string "power of your POKéMON.\p"
 	.string "It also enables them to use the HM move\n"
 	.string "CUT outside of battle.\p"
 	.string "Please take this with you, too.$"
 
 RustboroCity_Gym_Text_ExplainRockTomb:
-	.string "That TECHNICAL MACHINE, TM39,\n"
-	.string "contains ROCK TOMB.\p"
-	.string "It not only inflicts damage by dropping\n"
-	.string "rocks, it also lowers SPEED.\p"
+	.string "That TECHNICAL MACHINE, TM11,\n"
+	.string "contains Sunny Day.\p"
+	.string "It makes a cold day feel warmer.\n"
+	.string "It also boosts the power of fire moves.\p"
 	.string "If you use a TM, it instantly teaches\n"
 	.string "the move to a POKéMON.\p"
-	.string "Remember, a TM can be used only once,\n"
-	.string "so think before you use it.$"
+	.string "TMs can be used multiple times,\n"
+	.string "if I didn't fuck up the rom patch.$"
 
 RustboroCity_Gym_Text_RoxannePostBattle:
 	.string "Since you are so strong, you should\n"

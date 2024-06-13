@@ -1,0 +1,8 @@
+mapscripts Route1101_MapScripts {}
+
+script Route1101_EventScripts_EntranceSign {
+    lockall
+    msgbox ("Entrance to Liesingtown")
+    releaseall
+    
+}
