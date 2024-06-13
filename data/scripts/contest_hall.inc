@@ -30,6 +30,7 @@ LilycoveCity_ContestLobby_EventScript_ReceptionWelcome::
 
 LilycoveCity_ContestLobby_EventScript_GivePokeblockCase::
 	giveitem ITEM_POKEBLOCK_CASE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_POKEBLOCK_CASE
 	closemessage
 	release
