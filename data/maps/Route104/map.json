@@ -29,6 +29,8 @@
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 30,
       "y": 66,
+      "x": 30,
+      "y": 66,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -53,6 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "x": 35,
+      "y": 8,
       "x": 35,
       "y": 8,
       "elevation": 3,
@@ -131,6 +135,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "x": 34,
       "x": 34,
       "y": 8,
       "elevation": 3,
@@ -318,6 +323,8 @@
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
       "x": 36,
       "y": 8,
+      "x": 36,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -329,6 +336,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 33,
+      "y": 8,
       "x": 33,
       "y": 8,
       "elevation": 3,
@@ -344,6 +353,8 @@
       "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
       "x": 35,
       "y": 7,
+      "x": 35,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_ROTATE_COUNTERCLOCKWISE",
       "movement_range_x": 0,
@@ -355,6 +366,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 22,
+      "y": 73,
       "x": 22,
       "y": 73,
       "elevation": 3,
@@ -384,6 +397,8 @@
     {
 >>>>>>> 680c5581d4a2572cc336bb9e7107d2793d5baf56
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 20,
+      "y": 73,
       "x": 20,
       "y": 73,
       "elevation": 3,
@@ -455,6 +470,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "x": 21,
+      "y": 73,
       "x": 21,
       "y": 73,
       "elevation": 3,

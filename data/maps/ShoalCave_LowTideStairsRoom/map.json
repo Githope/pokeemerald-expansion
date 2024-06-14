@@ -13,6 +13,7 @@
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
+  "connections": 0,
   "object_events": [
 <<<<<<< HEAD
 
@@ -47,6 +48,9 @@
       "dest_map": "MAP_SHOAL_CAVE_LOW_TIDE_INNER_ROOM",
       "dest_warp_id": "2"
     }
+  ],
+  "coord_events": [
+
   ],
   "coord_events": [
 
