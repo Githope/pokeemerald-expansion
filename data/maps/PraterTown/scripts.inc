@@ -41,7 +41,7 @@ CutGuyRunsIN:
 	step_end
 
 Prater_Town_EventScript_CutHM_Item::
-	giveitem ITEM_KATANA
+	giveitem ITEM_HM01_CUT
 	setflag FLAG_UNUSED_0x022
 	removeobject 2
 	playfanfare MUS_OBTAIN_ITEM
@@ -65,4 +65,4 @@ PraterTown_EventScript_CutGuy_Text_3:
 	.string "Rami: Do not wake me up again!$"
 
 Prater_Town_EventScript_CutHM_Item_Text_0:
-	.string "You receive Rami's Katana$"
+	.string "You receive HM_01 Cut!$"
