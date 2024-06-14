@@ -1,0 +1,55 @@
+{
+  "id": "MAP_BIKING_TUNNEL2",
+  "name": "BikingTunnel2",
+  "layout": "LAYOUT_BIKING_TUNNEL2",
+  "music": "MUS_CYCLING",
+  "region_map_section": "MAPSEC_UNDERWATER_124",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 78,
+      "elevation": 0,
+      "dest_map": "MAP_BIKING_TUNNEL_CYCLING_SOUTH_ENTRANCE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 4,
+      "y": 78,
+      "elevation": 0,
+      "dest_map": "MAP_BIKING_TUNNEL_CYCLING_SOUTH_ENTRANCE",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_BIKING_TUNNEL_CYCLING_NORTH_ENTRANCE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_BIKING_TUNNEL_CYCLING_NORTH_ENTRANCE",
+      "dest_warp_id": "3"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

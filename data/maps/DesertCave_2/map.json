@@ -1,0 +1,62 @@
+{
+  "id": "MAP_DESERT_CAVE_2",
+  "name": "DesertCave_2",
+  "layout": "LAYOUT_DESERT_CAVE_2",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 37,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_DESERT_CAVE_3",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 74,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE1122",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 7,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE1122",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 72,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE1122",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 61,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_DESERT_CAVE_4",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

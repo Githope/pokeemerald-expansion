@@ -1,0 +1,101 @@
+mapscripts MtLaa_MapScripts { }
+
+script MtLaa_EventScript_FirstBlizzardGrunt {
+
+trainerbattle_single (TRAINER_GRUNT_MUSEUM_1,MtLaa_EventScript_FirstBlizzardGrunt_Intro, MtLaa_EventScript_FirstBlizzardGrunt_Defeat)
+msgbox ("You still shouldn't be here...")
+waitmessage
+closemessage
+    
+}
+
+script MtLaa_EventScript_SecondBlizzardGrunt {
+
+trainerbattle_single (TRAINER_GRUNT_MUSEUM_2, MtLaa_EventScript_SecondBlizzardGrunt_Intro, MtLaa_EventScript_SecondBlizzardGrunt_Defeat)
+msgbox ("This heat is too much for me!")
+waitmessage
+closemessage
+    
+}
+
+text MtLaa_EventScript_FirstBlizzardGrunt_Intro {
+
+    format("Hey you are not supposed to be here! I'll make you go away then!")
+    
+ }
+
+text MtLaa_EventScript_FirstBlizzardGrunt_Defeat {
+    "Ooof... I need to tell the others."
+}
+
+
+text MtLaa_EventScript_SecondBlizzardGrunt_Intro {
+
+  "Why wasn't someone guarding the entrance?"
+}
+
+text MtLaa_EventScript_SecondBlizzardGrunt_Defeat {
+    "That was a chilly defeat!"
+}
+
+script MtLaa_EventScript_Trigger {
+
+    lockall
+    message ("HEY YOU! What are you doing up here?")
+    playse (SE_PIN)
+    waitmessage
+    closemessage
+    applymovement (1,MtLaaBlizzardGrunttoFireTrainer)
+    waitmovement (1)
+    message ("Who are you?")
+    message ("I am a member of Team Blizzard!")
+    message ("And why I'm here is none of ")
+    message ("your business, sweetie!")
+    waitmessage
+    playse (SE_PIN)
+    message ("This place is getting too crowded.")
+    message ("We'll come back later...")
+    waitmessage
+    closemessage
+    applymovement (1,MtLaaBlizzardGruntLeaves)
+    waitmovement (1)
+    fadescreen (FADE_TO_BLACK)
+    setflag (FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_2F_CAPTAIN_STERN)
+    removeobject (1)
+    removeobject (5)
+    removeobject (4)
+    setvar (VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE,1)
+    fadescreen (FADE_FROM_BLACK)
+    releaseall
+
+   
+}
+
+movement MtLaaBlizzardGrunttoFireTrainer {
+
+face_up
+face_down
+walk_right
+
+    
+}
+
+
+movement MtLaaBlizzardGruntLeaves {
+
+walk_left 
+walk_up * 6
+
+    
+}
+
+
+script MtLaa_EventScript_FireTrainer {
+
+lockall
+msgbox (format("This does not look good. What does Team Blizzard want from the Volcano. Normally they really hate the heat... and what is all this equipment. At least they are gone for now. "))
+waitmessage
+closemessage
+releaseall  
+
+}

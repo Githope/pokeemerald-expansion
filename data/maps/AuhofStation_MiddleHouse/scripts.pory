@@ -1,0 +1,12 @@
+mapscripts AuhofStation_MiddleHouse_MapScripts { }
+
+script EventScript_MiddleHouse_Girl {
+
+lockall
+faceplayer
+msgbox (format("Oh... My neighbours house is so scary. I tried to go over there once, but I got spooked by the shadow of a huge Rat! I even dropped my new Pokéblock Case."))
+waitmessage
+closemessage
+releaseall
+    
+}

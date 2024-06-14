@@ -84,3 +84,47 @@ AncientTomb_EventScript_RanFromRegisteel::
 	goto Common_EventScript_LegendaryFlewAway
 	end
 
+AncientTomb_EventScript_TomTurbo::
+	lockall
+	playse MUS_ENCOUNTER_MAGMA
+	msgbox AncientTomb_EventScript_TomTurbo_Text_0
+	applymovement 2, Common_Movement_FacePlayer
+	waitmovement 0
+	playse SE_PIN
+	applymovement 2, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	msgbox AncientTomb_EventScript_TomTurbo_Text_1
+	trainerbattle_no_intro TRAINER_MAXIE_MT_CHIMNEY, AncientTomb_EventScript_TomTurboDefeat
+	msgbox AncientTomb_EventScript_TomTurbo_Text_2
+	closemessage
+	delay 30
+	fadescreen FADE_TO_BLACK
+	removeobject 2
+	removeobject 3
+	removeobject 4
+	removeobject 5
+	setflag FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA
+	fadescreen FADE_FROM_BLACK
+	setflag FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY
+	releaseall
+	end
+
+
+AncientTomb_EventScript_TomTurboDefeat::
+	msgbox AncientTomb_EventScript_TomTurboDefeat_Text_0
+	return
+
+
+AncientTomb_EventScript_TomTurbo_Text_0:
+	.string "Hey Hey Hey Tom Turbo PREINTRO$"
+
+AncientTomb_EventScript_TomTurbo_Text_1:
+	.string "Hey Hey Hey Tom Turbo INTRO$"
+
+AncientTomb_EventScript_TomTurbo_Text_2:
+	.string "Hey Hey Hey Tom Turbo LEAVES$"
+
+AncientTomb_EventScript_TomTurboDefeat_Text_0:
+	.string "Hey Hey Hey Tom Turbo DEFEAT$"

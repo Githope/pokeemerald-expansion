@@ -672,7 +672,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_TM48] = {gItemIcon_TM, gItemIconPalette_PsychicTMHM},
     [ITEM_TM49] = {gItemIcon_TM, gItemIconPalette_DarkTMHM},
     [ITEM_TM50] = {gItemIcon_TM, gItemIconPalette_FireTMHM},
-    [ITEM_TM51] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
+    [ITEM_TM51] = {gItemIcon_TM, gItemIconPalette_BugTMHM},  
     [ITEM_TM52] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
     [ITEM_TM53] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
     [ITEM_TM54] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
@@ -697,7 +697,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_TM73] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
     [ITEM_TM74] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
     [ITEM_TM75] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
-    [ITEM_TM76] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
+    [ITEM_TM76] = {gItemIcon_TM, gItemIconPalette_RockTMHM},  // ------
     [ITEM_TM77] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
     [ITEM_TM78] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
     [ITEM_TM79] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
@@ -844,6 +844,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_LINKING_CORD] = {gItemIcon_LinkingCord, gItemIconPalette_LinkingCord},
     [ITEM_PEAT_BLOCK] = {gItemIcon_PeatBlock, gItemIconPalette_PeatBlock},
     [ITEM_BERSERK_GENE] = {gItemIcon_BerserkGene, gItemIconPalette_BerserkGene},
+    [ITEM_KATANA] ={gItemIcon_RustedSword, gItemIconPalette_RustedWeapons},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

@@ -1,0 +1,153 @@
+mapscripts IndoorSchwchPort_FlyBar_MapScripts { }
+
+script IndoorSchwchPort_FlyBar_EventScript_Bartender {
+
+lockall
+msgbox (format("Sailor: I'd like a beer please."))
+msgbox (format("Bartender: Sorry you gotta be a pilot to drink in here."))
+msgbox (format("Sailor: Uhhh... but I am a pilot."))
+msgbox (format("Bartender: Where is you uniform?"))
+msgbox (format("Sailor: Ummm... I stowed it safely in the overhead compartment."))
+msgbox (format("Bartender: Well. You talk the talk."))
+waitmessage
+closemessage
+releaseall
+    
+}
+
+script IndoorSchwchPort_FlyBar_EventScript_Bartender2 {
+
+lockall
+msgbox (format("Bartender: You're not just impersonating a pilot so you can drink here are you?"))
+msgbox (format("Sailor: Yeah... that's exactly why I'm here."))
+msgbox (format("Bartender: Hahaha. You Fly Boys. You crack me up."))
+msgbox (format("Sailor: But I keep telling you I am not a pilot."))
+msgbox (format("Bartender: And I keep telling you. You Fly Boys crack me up!"))    
+waitmessage
+closemessage
+releaseall
+    
+}
+
+script IndoorSchwchPort_FlyBar_EventScript_Bartender3 {
+
+lockall
+msgbox (format("Yo. I'm on a smoke break don't disturb me. Kitchen staff usually takes a break until all the fighting is done here. After everyone's done fighting I'll go back to the kitchen and then I'll start making some food."))
+waitmessage
+closemessage
+releaseall
+}
+
+script IndoorSchwchPort_FlyBar_EventScript_Lukas {
+
+lockall
+if (flag(FLAG_RECEIVED_HM02)) {
+msgbox (format("Never liked this place anyway."))
+waitmessage
+closemessage
+releaseall
+}
+
+else {
+msgbox (format("What! Team Blizzard tried to cause a overload the entire power grid? What would be their reasoning for this madness? Good thing you were there to intervene!"))
+waitmessage
+closemessage 
+msgbox (format("Thank you, {PLAYER}! You really did something truly heroic today. And you deserve this."))
+waitmessage
+closemessage 
+giveitem (ITEM_HM02_FLY)
+setflag (FLAG_RECEIVED_HM02)
+msgbox (format("This HM contains the move Fly! Take it and make your Pokémon soar through the sky like the planes here in Schwechport. And you know what. I think this whole thing inspired me to quit my job at the Gym and become an artist. Never liked this place anyway."))
+waitmessage
+closemessage
+releaseall}
+}
+
+script IndoorSchwchPort_FlyBar_EventScript_Bartender4 {
+
+lockall
+faceplayer
+msgbox (format("Yo. I'm on a smoke break don't disturb me. Kitchen staff usually takes a break until all the fighting is done here. After everyone's done fighting I'll go back to the kitchen and then I'll start making some food."))
+waitmessage
+closemessage
+releaseall
+}
+
+
+script IndoorSchwchPort_FlyBar_OldGuy {
+
+
+lockall
+faceplayer
+if (flag(FLAG_RECEIVED_TM40)) {                                                                           // AFTER BATTLES AND TM RECEIVED
+msgbox (format("Hey, Ace! What a spectacular round of battles that was. Now for some food."))
+waitmessage
+closemessage
+releaseall
+}
+
+else {                                                                                   // AFTER BATTLE -> RECEIVE TM
+if (flag(FLAG_UNUSED_0x028)) {
+
+msgbox (format("Every winner of the Little Black Box Brawls is known as an Ace. And as a new Ace you should also get this."))
+waitmessage
+closemessage 
+giveitem (ITEM_TM40)
+setflag (FLAG_RECEIVED_TM40)
+msgbox (format("This TM contains the move Aerial Ace. You are now an honorary Pilot in this Bar and with this TM your Pokémon can also show it! After this grand show I need something to eat now."))
+}
+
+else {                                                                                 // BATTLES NOT FINISHED
+
+msgbox (format("Welcome to The Little Black Box. This is a Pilot Bar where people from all over the world come by to relax and have exciting Pokémon battles. If you love to battle show the other trainers in here what you can do and maybe I'll even give you a prize."))
+
+
+}
+waitmessage
+closemessage
+releaseall
+}
+
+}
+
+
+
+
+
+
+
+script IndoorSchwchPort_FlyBar_CheckBarBattles {
+
+if (!defeated(TRAINER_KARA)) {          // TRAINER NOT DEFEATED 
+releaseall
+}
+
+else {                                  // TRAINER KARA DEFEATED 
+
+    if (!defeated(TRAINER_RICHARD)) {      // KARA DEFEATED BUT RICHARD NOT
+    releaseall
+    }
+
+        else {                                  // KARA DEFEATED AND RICHARD
+            
+            if (!defeated(TRAINER_HERMAN)) {
+            releaseall
+            }
+
+            else {
+                if (!defeated(TRAINER_SUSIE)) {
+                releaseall
+                }
+
+                else {
+                    setflag (FLAG_UNUSED_0x028)
+                    releaseall
+                    }
+            }
+
+
+
+    } 
+
+}
+}

@@ -1,0 +1,69 @@
+mapscripts SafariZone_Orangerie_MapScripts {}
+
+script SafariZone_Orangerie_Eventscript_BikersBEGONE {
+    lockall
+    msgbox ("Bikers: Let's just take the ape.")
+    waitmessage
+    msgbox (format("Kevin: You will not hurt any of the Pokémon in this Zoo. Now leave before I call the Police!"))
+    waitmessage
+    setflag (FLAG_UNUSED_0x020)
+    msgbox ("???: Grrr, You win this time.")
+    waitmessage
+    closemessage
+    fadescreen (FADE_TO_BLACK)
+    playse (SE_PIN)
+    call (SafariZone_Orangerie_Eventscript_BikersBEGONEClear)
+    fadescreen (FADE_FROM_BLACK)
+    releaseall
+    setvar (VAR_UNUSED_0x40F7,1)
+
+}
+
+script SafariZone_Orangerie_Eventscript_Kevin {
+    lockall
+    msgbox (format("Kevin: Those Bikers want to hurt innocent Pokémon. But I won't let them!"))
+    waitmessage
+    closemessage
+    releaseall
+
+}
+
+script SafariZone_Orangerie_Eventscript_Oranguru {
+
+    lockall
+    msgbox ("Oook ook.")
+    waitmessage
+    msgbox ("The baby Oranguru seems happy.")
+    waitmessage
+    closemessage
+    releaseall
+
+}
+
+script SafariZone_Orangerie_Eventscript_BikersBEGONEClear {
+
+removeobject (10)
+removeobject (6)
+removeobject (2)
+removeobject (1)
+    
+}
+
+script SafariZone_Orangerie_Eventscript_BikerTalking {
+
+lockall
+msgbox (format("Grrrrr.... I hate having to deal with people like you. You will see all Pokémon will have to face their true future just as all People will. When the machines come they will spare no one. "))
+waitmessage
+closemessage
+applymovement (4,Biker_Safari_Leave)
+waitmovement (4)
+removeobject (4)
+releaseall
+
+}
+
+movement Biker_Safari_Leave {
+
+walk_fast_down * 5
+    
+}

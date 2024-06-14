@@ -1,4 +1,4 @@
-.set LOCALID_ATTENDANT, 1
+ .set LOCALID_ATTENDANT, 1
 
 SafariZone_South_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SafariZone_South_OnTransition
@@ -150,3 +150,64 @@ SafariZone_Northeast_EventScript_Woman::
 SafariZone_Northeast_EventScript_Girl::
 	msgbox SafariZone_Northeast_Text_Girl, MSGBOX_NPC
 	end
+
+SafariZone_South_EventScript_EnclosureSign::
+	lockall
+	msgbox SafariZone_South_EventScript_EnclosureSign_Text_0
+	waitmessage
+	closemessage
+	releaseall
+	return
+
+
+SafariZone_Northeast_EventScript_EnclosureSign::
+	lockall
+	msgbox SafariZone_Northeast_EventScript_EnclosureSign_Text_0
+	waitmessage
+	closemessage
+	releaseall
+	return
+
+
+SafariZone_Northeast_EventScript_EnclosureSign2::
+	lockall
+	msgbox SafariZone_Northeast_EventScript_EnclosureSign2_Text_0
+	waitmessage
+	closemessage
+	releaseall
+	return
+
+
+SafariZone_Northeast_EventScript_EnclosureSign3::
+	lockall
+	msgbox SafariZone_Northeast_EventScript_EnclosureSign3_Text_0
+	waitmessage
+	closemessage
+	releaseall
+	return
+
+
+SafariZone_Northwest_EventScript_OrangerieSign::
+	lockall
+	msgbox SafariZone_Northwest_EventScript_OrangerieSign_Text_0
+	waitmessage
+	closemessage
+	releaseall
+	return
+
+
+SafariZone_South_EventScript_EnclosureSign_Text_0:
+	.string "Wingull and Rhyhorn enclosure.$"
+
+SafariZone_Northeast_EventScript_EnclosureSign_Text_0:
+	.string "Marill enclosure.$"
+
+SafariZone_Northeast_EventScript_EnclosureSign2_Text_0:
+	.string "Kecleon enclosure.$"
+
+SafariZone_Northeast_EventScript_EnclosureSign3_Text_0:
+	.string "Skitty enclosure.$"
+
+SafariZone_Northwest_EventScript_OrangerieSign_Text_0:
+	.string "Orangerie. Research facility and\n"
+	.string "habitat for Orangurus.$"

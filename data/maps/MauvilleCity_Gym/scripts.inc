@@ -89,26 +89,18 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis, MSGBOX_DEFAULT
 	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 3
-	clearflag FLAG_HIDE_VERDANTURF_TOWN_SCOTT
 	setflag FLAG_DEFEATED_MAUVILLE_GYM
 	setflag FLAG_BADGE03_GET
-	addvar VAR_PETALBURG_GYM_STATE, 1
+	addvar VAR_PRATER_TOWN_STATE, 0
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 3
 	call Common_EventScript_SetGymTrainers
-	special MauvilleGymDeactivatePuzzle
-	special DrawWholeMapView
 	playse SE_UNLOCK
 	call MauvilleCity_Gym_EventScript_GiveShockWave
 	closemessage
 	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox MauvilleCity_Gym_Text_RegisteredWattson, MSGBOX_DEFAULT
-	waitfanfare
-	closemessage
-	delay 30
-	setflag FLAG_ENABLE_WATTSON_MATCH_CALL
-	release
+
 	end
 
 MauvilleCity_Gym_EventScript_GiveShockWave2::
@@ -124,6 +116,8 @@ MauvilleCity_Gym_EventScript_GiveShockWave::
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
 	msgbox MauvilleCity_Gym_Text_ExplainShockWave, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM34
+	setflag FLAG_HIDE_ROUTE_119_KECLEON_1 @@ BOTH FOR PRATERHM
+	setflag FLAG_UNUSED_0x022     @@ for CUT HM Prater,
 	return
 
 MauvilleCity_Gym_EventScript_CompletedNewMauville::
@@ -333,17 +327,17 @@ MauvilleCity_Gym_Text_AngeloPostBattle:
 	.string "forehead. It makes me happy!$"
 
 MauvilleCity_Gym_Text_WattsonIntro:
-	.string "I've given up on my plans to convert\n"
-	.string "the city, I have.\p"
-	.string "And so, I put my time into making\n"
-	.string "door traps in my GYM.\p"
+	.string "This airport sucks. I'm gonna do\n"
+	.string "something else. I want to be an artist.\p"
+	.string "And so, I put my time into being\n"
+	.string "a creative mastermind.\p"
 	.string "Oh? Now, what are you doing here?\p"
 	.string "What's that? You say you've gotten\n"
-	.string "past all my rigged doors?\p"
+	.string "past all my trainers?\p"
 	.string "Wahahahah!\n"
 	.string "Now, that is amusing!\p"
-	.string "Then, I, WATTSON, the LEADER of\n"
-	.string "MAUVILLE GYM, shall electrify you!$"
+	.string "Then, I, Lukas, the LEADER of\n"
+	.string "SCHWECHPORT GYM, shall electrify you!$"
 
 MauvilleCity_Gym_Text_WattsonDefeat:
 	.string "Wahahahah!\n"
@@ -352,11 +346,11 @@ MauvilleCity_Gym_Text_WattsonDefeat:
 	.string "Take this BADGE!$"
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge:
-	.string "{PLAYER} received the DYNAMO BADGE\n"
-	.string "from WATTSON.$"
+	.string "{PLAYER} received the ELECTRIC BADGE\n"
+	.string "from Lukas.$"
 
 MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
-	.string "With the DYNAMO BADGE, POKéMON can\n"
+	.string "With the ELECTRIC BADGE, POKéMON can\n"
 	.string "use ROCK SMASH out of battle.\p"
 	.string "And, it will make your POKéMON a little\n"
 	.string "bit faster, too.\p"

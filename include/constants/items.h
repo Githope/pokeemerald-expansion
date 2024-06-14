@@ -840,6 +840,8 @@
 #define ITEM_TM48_SKILL_SWAP ITEM_TM48
 #define ITEM_TM49_SNATCH ITEM_TM49
 #define ITEM_TM50_OVERHEAT ITEM_TM50
+#define ITEM_TM51_SILVER_WIND ITEM_TM51
+#define ITEM_TM76_ROCK_BLAST ITEM_TM76
 
 #define ITEM_HM01_CUT ITEM_HM01
 #define ITEM_HM02_FLY ITEM_HM02
@@ -973,8 +975,10 @@
 #define ITEM_LINKING_CORD 796
 #define ITEM_PEAT_BLOCK 797
 #define ITEM_BERSERK_GENE 798
+//HM Items
+#define ITEM_KATANA 799
 
-#define ITEMS_COUNT 799
+#define ITEMS_COUNT 800
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations
@@ -1053,5 +1057,6 @@
 
 // Enigma Berry dummy constant
 #define EFFECT_ITEM_ENIGMA_BERRY_EREADER    1
+
 
 #endif  // GUARD_CONSTANTS_ITEMS_H

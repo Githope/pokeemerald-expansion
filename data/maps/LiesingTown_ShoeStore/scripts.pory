@@ -1,0 +1,81 @@
+mapscripts LiesingTown_ShoeStore_MapScripts { }
+
+script IndoorLiesingTown_ShoeStore_EventScript_BackdoorSign {
+
+lockall
+msgbox (format("This looks like the backdoor leading to the garbage bins out back. "))
+waitmessage
+closemessage
+releaseall
+    
+}
+
+script IndoorLiesingTown_ShoeStore_EventScript_CounterListSign {
+
+lockall
+msgbox (format("Just a flyer with some their new shoes on it. "))
+waitmessage
+closemessage
+releaseall
+    
+}
+
+script IndoorLiesingTown_ShoeStore_EventScript_ShoeGirl {
+
+lockall
+msgbox (format("Wow, what they said is true. They really have the largest selection of shoes here! A dream come true."))
+waitmessage
+closemessage
+releaseall
+    
+}
+
+script LiesingTown_ShoeStore_Mart_EventScript_Clerk {
+
+lockall
+faceplayer
+msgbox (format("Hello, and welcome to the Liesing Shoe Store. We also sell goods other than shoes. How can I help you?")) 
+waitmessage
+pokemart (LiesingTown_ShoeStore_Mart)
+msgbox (format("Thank you for shopping with us. Come again!"))
+releaseall
+	
+}
+	
+
+
+mart LiesingTown_ShoeStore_Mart {
+    
+
+	ITEM_POKE_BALL
+	ITEM_POTION
+	ITEM_REPEL
+    ITEM_PARALYZE_HEAL
+    ITEM_AWAKENING
+	
+	
+}
+
+script LiesingTown_ShoeStore_Mart_EventScript_Clerk2 {
+
+lockall
+faceplayer
+if (flag(FLAG_RECEIVED_POTION_OLDALE)) {
+msgbox (format("A POTION can be used anytime, so it's even more useful than a POKéMON CENTER in certain situations."))
+}
+else {
+msgbox (format("Hello, you look like you are already wearing our newest fashion shoes! Wow, so cool. You know what, since you are sooo cool. I'm gonna give you a potion on the house as a promotional gift!"))
+waitmessage
+closemessage
+giveitem (ITEM_POTION)
+setflag (FLAG_RECEIVED_POTION_OLDALE)
+msgbox (format("Enjoy, Kiddo!"))
+waitmessage
+closemessage
+}
+
+waitmessage
+closemessage
+releaseall
+	
+}

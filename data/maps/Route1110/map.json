@@ -1,0 +1,187 @@
+{
+  "id": "MAP_ROUTE1110",
+  "name": "Route1110",
+  "layout": "LAYOUT_ROUTE1110",
+  "music": "MUS_ROUTE110",
+  "region_map_section": "MAPSEC_ROUTE_10",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE1105",
+      "offset": -38,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ARCADIA",
+      "offset": -8,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_MOEDLING",
+      "offset": -25,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SUDOWOODO",
+      "x": 18,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SUDOWOODO",
+      "x": 20,
+      "y": 37,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route1110_EventScript_WailmerPailTreeSudowoodo",
+      "flag": "FLAG_DEFEATED_SUDOWOODO"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M",
+      "x": 45,
+      "y": 15,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route110_EventScript_CyclingGuy2",
+      "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M",
+      "x": 44,
+      "y": 15,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route110_EventScript_CyclingGuy2",
+      "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 32,
+      "y": 20,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_11"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 52,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route113_EventScript_ItemHyperPotion",
+      "flag": "FLAG_ITEM_ROUTE_113_HYPER_POTION"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 31,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route116_EventScript_ItemHPUp",
+      "flag": "FLAG_ITEM_ROUTE_116_HP_UP"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 0,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtPyre_2F_EventScript_ItemUltraBall",
+      "flag": "FLAG_ITEM_MT_PYRE_2F_ULTRA_BALL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 15,
+      "y": 29,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VictoryRoad_B2F_EventScript_ItemFullHeal",
+      "flag": "FLAG_ITEM_VICTORY_ROAD_B2F_FULL_HEAL"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 26,
+      "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE110_SEASIDE_CYCLING_ROAD_NORTH_ENTRANCE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 25,
+      "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE110_SEASIDE_CYCLING_ROAD_NORTH_ENTRANCE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 42,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_BIKING_TUNNEL_CYCLING_SOUTH_ENTRANCE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 43,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_BIKING_TUNNEL_CYCLING_SOUTH_ENTRANCE",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

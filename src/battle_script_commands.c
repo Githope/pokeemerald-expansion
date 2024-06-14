@@ -15376,7 +15376,7 @@ static void Cmd_handleballthrow(void)
         #endif
             case ITEM_GREAT_BALL:
             case ITEM_SAFARI_BALL:
-                ballMultiplier = 150;
+                ballMultiplier = 350;
                 break;
             case ITEM_NET_BALL:
                 if (IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_WATER) || IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_BUG))

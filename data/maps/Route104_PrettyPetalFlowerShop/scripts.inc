@@ -98,3 +98,27 @@ Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry::
 	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
 	release
 	end
+
+Route_104_PrettyPetalFlowerShop_EventScript_BerryLady::
+	lock
+	faceplayer
+	message Route_104_PrettyPetalFlowerShop_EventScript_BerryLady_Text_0
+	waitmessage
+	pokemart BerryMartItems
+	msgbox Route_104_PrettyPetalFlowerShop_EventScript_BerryLady_Text_1
+	release
+	end
+
+
+	.align 2
+BerryMartItems:
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_PERSIM_BERRY
+	.2byte ITEM_NONE
+
+Route_104_PrettyPetalFlowerShop_EventScript_BerryLady_Text_0:
+	.string "Do you want to buy some Berries?$"
+
+Route_104_PrettyPetalFlowerShop_EventScript_BerryLady_Text_1:
+	.string "Please come again.$"

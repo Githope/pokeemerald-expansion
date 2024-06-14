@@ -1,0 +1,256 @@
+mapscripts Schwechport_MapScripts {
+    
+}
+
+script Schwechport_EventScript_WelcomeSign {
+
+lockall
+msgbox (format("Welcome to Schwechport. The windy city."))
+waitmessage
+closemessage
+releaseall 
+    
+}
+
+script Schwechport_EventScript_FlyBarSign {
+
+lockall
+msgbox (format("The Little Black Box. Pilot Bar."))
+waitmessage
+closemessage
+releaseall 
+    
+}
+
+script Schwechport_EventScript_GymSign {
+
+lockall
+msgbox (format("Schwechport Gym. Type: Electric, Ace: Level 25"))
+waitmessage
+closemessage
+releaseall 
+    
+}
+
+script Schwechport_EventScript_GymSign2 {
+
+lockall
+msgbox (format("Schwechport Gym. Type: Electric, Ace: Level 25"))
+waitmessage
+closemessage
+releaseall 
+    
+}
+
+script Schwechport_EventScript_CasinoSign {
+
+lockall
+msgbox (format("Monty Casino. Out here everything is legal."))
+waitmessage
+closemessage
+releaseall 
+    
+}
+
+script Schwechport_EventScript_HerbShopSign {
+
+lockall
+msgbox (format("Stoner's Pot Palace. Freshest herbs and spices in Schwechport!"))
+waitmessage
+closemessage
+releaseall 
+    
+}
+
+script Schwechport_EventScript_OldGuy {
+
+lockall
+faceplayer
+msgbox (format("Yo, If you ever wanna take a break from your travels you can hang out here in The Little Black Box. Pilots and Commuters from the big cities meet up here to relax and battle their Pokémon."))
+waitmessage
+closemessage
+releaseall 
+    
+}
+
+script Schwechport_EventScript_Worker1 {
+
+lockall
+faceplayer
+msgbox (format("Most trade goods come into this country through this airport."))
+waitmessage
+closemessage
+releaseall 
+    
+}
+
+script Schwechport_EventScript_FancyGuy {
+
+lockall
+faceplayer
+msgbox (format("I love looking at the planes coming in. Always something interesting every day! Yesterday I even saw the famous Spruce Moose land here."))
+waitmessage
+closemessage
+releaseall 
+    
+}
+
+
+script Schwechport_EventScript_Worker2 {
+
+lockall
+msgbox (format("Way back when I used to work for Crazy Clown Airlines... Never. Again."))
+waitmessage
+closemessage
+releaseall 
+    
+}
+
+script Schwechport_EventScript_Worker3 {
+
+lockall
+msgbox (format("I got a feeling some weird stuff is happening at the power plant. All the Pokémon in the area seem to feel it too."))
+waitmessage
+closemessage
+msgbox (format("Man I am not getting paid enough to deal with this."))
+waitmessage
+closemessage
+releaseall 
+    
+}
+
+
+
+script Schwechport_EventScript_PowerPlantGuysInc {
+
+lockall
+playse (MUS_AQUA_MAGMA_HIDEOUT)
+msgbox (format("Yo, Boss! Another one broke down!"))
+waitmessage
+closemessage
+applymovement (12,Schwechport_PowerPlantGuysEnter)
+applymovement (13,Schwechport_PowerPlantGuysEnter2)
+setvar (VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE,4)
+waitmovement (13)
+playse (SE_SLIDING_DOOR)
+clearflag (FLAG_HIDE_VERDANTURF_TOWN_SCOTT)
+addobject (14)
+applymovement (14, Schwechport_LukasEnter)
+msgbox (format("Lukas: What is it this time?"))
+waitmessage
+closemessage
+msgbox (format("Sir, Another Truck broke down near the power plant."))
+waitmessage
+closemessage
+msgbox (format("Lukas: This is bad... someone has to go check it out. You, {PLAYER}! Can you go to the power plant? After what I have seen in our Gym Battle you seem like just the right person for a job like this. I will make sure our town grid won't shut down. Meet me at the Little Black Box once you know more. I'm counting on ya! Good Luck and see you soon. And you two. Stop standing around we got work to do!"))
+waitmessage
+closemessage
+msgbox (format("Yes, Sir!"))
+waitmessage
+closemessage
+applymovement (12,Schwechport_PowerPlantGuysLeave)
+applymovement (13,Schwechport_PowerPlantGuysLeave2)
+applymovement (14, Schwechport_LukasLeave)
+waitmovement (14)
+setflag (FLAG_HIDE_VERDANTURF_TOWN_SCOTT)
+removeobject (13)
+removeobject (12)
+removeobject (14)
+playse (MUS_SLATEPORT)
+releaseall 
+
+}
+
+script Schwechport_EventScript_PowerPlantGuysInc2 {
+
+lockall
+playse (MUS_AQUA_MAGMA_HIDEOUT)
+msgbox (format("Yo, Boss! Another one broke down!"))
+waitmessage
+closemessage
+applymovement (12,Schwechport_PowerPlantGuysEnter)
+applymovement (13,Schwechport_PowerPlantGuysEnter2)
+setvar (VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE,4)
+waitmovement (13)
+playse (SE_SLIDING_DOOR)
+clearflag (FLAG_HIDE_VERDANTURF_TOWN_SCOTT)
+addobject (14)
+applymovement (14, Schwechport_LukasEnter)
+msgbox (format("Lukas: What is it this time?"))
+waitmessage
+closemessage
+msgbox (format("Sir, Another Truck broke down near the power plant."))
+waitmessage
+closemessage
+msgbox (format("Lukas: This is bad... someone has to go check it out. You, {PLAYER}! Can you go to the power plant? After what I have seen in our Gym Battle you seem like just the right person for a job like this. I will make sure our town grid won't shut down. Meet me at the Little Black Box once you know more. I'm counting on ya! Good Luck and see you soon. And you two. Stop standing around we got work to do!"))
+waitmessage
+closemessage
+msgbox (format("Yes, Sir!"))
+waitmessage
+closemessage
+applymovement (12,Schwechport_PowerPlantGuysLeave)
+applymovement (13,Schwechport_PowerPlantGuysLeave2)
+applymovement (14, Schwechport_LukasLeave)
+waitmovement (14)
+setflag (FLAG_HIDE_VERDANTURF_TOWN_SCOTT)
+removeobject (13)
+removeobject (12)
+removeobject (14)
+playse (MUS_SLATEPORT)
+releaseall 
+
+}
+
+
+
+movement Schwechport_PowerPlantGuysEnter {
+
+walk_fast_down *6
+walk_fast_right 
+    
+}
+
+
+movement Schwechport_PowerPlantGuysLeave {
+
+walk_fast_left
+walk_fast_up *8
+
+}
+
+movement Schwechport_PowerPlantGuysEnter2 {
+
+walk_fast_down *6
+walk_fast_right *2   
+}
+
+
+movement Schwechport_PowerPlantGuysLeave2 {
+
+walk_fast_left *2
+walk_fast_up *8
+
+}
+
+movement Schwechport_LukasEnter {
+
+walk_fast_down 
+walk_fast_left *2
+    
+}
+
+movement Schwechport_LukasEnter2 {
+
+walk_fast_down *2
+walk_fast_left *2
+    
+}
+
+
+movement Schwechport_LukasLeave {
+
+walk_fast_left *5
+walk_fast_up *8
+
+}
+

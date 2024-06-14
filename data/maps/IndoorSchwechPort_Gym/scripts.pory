@@ -1,0 +1,6 @@
+mapscripts IndoorSchwechPort_Gym_MapScripts { }
+
+script IndoorSchwechPort_Gym_Sign {
+msgbox (format("This is the Schwech Port Gym. Its Gym Leader is Lukas the electric Eccentric! His Ace is level 25"))
+    
+}

@@ -29,11 +29,11 @@ LilycoveCity_ContestLobby_EventScript_ReceptionWelcome::
 	return
 
 LilycoveCity_ContestLobby_EventScript_GivePokeblockCase::
-	msgbox LilycoveCity_ContestLobby_Text_ReceptionDontHavePokeblockCase, MSGBOX_DEFAULT
 	giveitem ITEM_POKEBLOCK_CASE
 	setflag FLAG_RECEIVED_POKEBLOCK_CASE
-	msgbox LilycoveCity_ContestLobby_Text_NowThatWeveClearedThatUp, MSGBOX_DEFAULT
-	return
+	closemessage
+	release
+	end
 
 LilycoveCity_ContestLobby_EventScript_PickUpPrize::
 	msgbox LilycoveCity_ContestLobby_Text_PokemonWonWeHavePrize, MSGBOX_DEFAULT

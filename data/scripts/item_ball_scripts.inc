@@ -375,7 +375,7 @@ FieryPath_EventScript_ItemFireStone::
 	end
 
 FieryPath_EventScript_ItemTM06::
-	finditem ITEM_TM06
+	finditem ITEM_TM76
 	end
 
 MeteorFalls_1F_1R_EventScript_ItemTM23::
@@ -463,7 +463,7 @@ ScorchedSlab_EventScript_ItemTM11::
 	end
 
 SafariZone_Northwest_EventScript_ItemTM22::
-	finditem ITEM_TM22
+	finditem ITEM_TM09
 	end
 
 SafariZone_North_EventScript_ItemCalcium::

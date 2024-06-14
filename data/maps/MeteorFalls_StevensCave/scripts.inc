@@ -1,4 +1,4 @@
-.set LOCALID_STEVEN, 1
+ .set LOCALID_STEVEN, 1
 
 MeteorFalls_StevensCave_MapScripts::
 	.byte 0
@@ -56,4 +56,17 @@ MeteorFalls_StevensCave_Text_MyPredictionCameTrue:
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "Fufufu, even I couldn't tell you that.$"
+
+MeteorFalls_StevensCave_EventScript_Deoxys::
+	lockall
+	waitse
+	playmoncry SPECIES_DEOXYS, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_DEOXYS, 50
+	dowildbattle
+	removeobject 5
+	setflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA
+	goto Common_EventScript_RemoveStaticPokemon
+	return
 

@@ -58,11 +58,11 @@ Route121_SafariZoneEntrance_EventScript_TryEnterSafariZone::
 	checkitem ITEM_POKEBLOCK_CASE
 	goto_if_eq VAR_RESULT, 0, Route121_SafariZoneEntrance_EventScript_NoPokeblockCase
 	call Route121_SafariZoneEntrance_EventScript_CheckHasRoomForPokemon
-	checkmoney 500
+	checkmoney 10
 	goto_if_eq VAR_RESULT, 0, Route121_SafariZoneEntrance_EventScript_NotEnoughMoney
 	playse SE_SHOP
 	msgbox Route121_SafariZoneEntrance_Text_ThatWillBe500Please, MSGBOX_DEFAULT
-	removemoney 500
+	removemoney 10
 	updatemoneybox
 	msgbox Route121_SafariZoneEntrance_Text_HereAreYourSafariBalls, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM

@@ -1,0 +1,152 @@
+
+mapscripts AuhofStation_MapScripts { }
+
+// RIVALS = YOSHI = BRENDAN; TWINNI = MAY 
+// Starters = 0=Treecko=Meowth, 1=Torchic=Meowth_Alolan, 2=Mudkip=Meowth_Galarian
+
+script AuhofStation_EventScript_TravelHouse_Sign {
+    msgbox ("Auhof Station Martial Arts")
+    waitmessage
+    closemessage
+}
+
+script AuhofStation_EventScript_SmallHouse_Sign {
+    msgbox ("Rock Smashers House")
+    waitmessage
+    closemessage
+}
+
+script AuhofStation_EventScript_Welcome_Sign {
+    msgbox (format("Welcome to Auhof Station."
+                    "We hope you don't stay."))
+                    waitmessage
+    closemessage
+}
+
+script AuhofStation_EventScript_RatHouse_Sign {
+    msgbox ("Abandoned House")
+    waitmessage
+    closemessage
+}
+
+script AuhofStation_EventScript_Reporter_Sign {
+    msgbox ("This is gonna be a good story.")
+    waitmessage
+    closemessage
+}
+
+script AuhofStation_EventScript_CameraMan_Sign {
+    msgbox ("Hey Kid, Stay out of the shot!")
+    waitmessage
+    closemessage
+}
+
+script Auhofstation_EventScript_TwinniBattle {
+    playbgm (MUS_ENCOUNTER_MAY, TRUE) 
+    applymovement (4,AuhofStation_Twinni_ComesCloser)
+    waitmovement (0)
+	msgbox ("Twinni: Let's see how your Kitten is doing!")
+    waitmessage
+    closemessage
+	if (var(VAR_STARTER_MON) == 0) 
+    { trainerbattle_no_intro (TRAINER_MAY_ROUTE_103_TREECKO, AuhofStation_Text_MayDefeated)
+
+    }
+	elif (var(VAR_STARTER_MON) == 1) 
+    { trainerbattle_no_intro (TRAINER_MAY_ROUTE_103_TORCHIC, AuhofStation_Text_MayDefeated)
+    }
+	elif(
+        var(VAR_STARTER_MON) == 2) 
+    { trainerbattle_single (TRAINER_MAY_ROUTE_103_MUDKIP, May_Intro, AuhofStation_Text_MayDefeated)
+    }
+    fadedefaultbgm
+    setvar (VAR_AUHOFSTATION_STATE, 1)
+    end
+
+}
+
+movement AuhofStation_Twinni_ComesCloser {
+
+walk_down *2
+
+}
+
+
+//script AuhofStation_EventScript_MayBattleTreecko {   
+///trainerbattle_no_intro (TRAINER_MAY_ROUTE_110_TREECKO, AuhofStation_Text_MayDefeated)
+//end
+//}
+//script AuhofStation_EventScript_MayBattleTorchic {
+ //   trainerbattle_no_intro (TRAINER_MAY_ROUTE_110_TORCHIC, AuhofStation_Text_MayDefeated)
+//	end
+//}
+
+//script AuhofStation_EventScript_MayBattleMudkip {
+//	trainerbattle_single (TRAINER_MAY_ROUTE_110_MUDKIP, May_Intro, AuhofStation_Text_MayDefeated)
+//	end
+//}     --------------------------------------------------------------------------------------------- no idea why this wouldnt work
+
+
+text May_Intro{
+    "Twinni: You'll never win!"
+}
+
+text AuhofStation_Text_MayDefeated {
+    "Twinni: Poop..."
+}
+
+script Auhofstation_EventScript_YoshiBattle {
+	 playbgm (MUS_ENCOUNTER_BRENDAN, TRUE) 
+    msgbox ("Yoshi: You made her cry!")
+	if (var(VAR_STARTER_MON) == 0) 
+    { trainerbattle_no_intro (TRAINER_BRENDAN_ROUTE_103_TREECKO, AuhofStation_Text_YoshiDefeated)
+
+    }
+	elif (var(VAR_STARTER_MON) == 1) 
+    { trainerbattle_no_intro (TRAINER_BRENDAN_ROUTE_103_TORCHIC, AuhofStation_Text_YoshiDefeated)
+    }
+	elif(
+        var(VAR_STARTER_MON) == 2) 
+    { trainerbattle_no_intro (TRAINER_BRENDAN_ROUTE_103_MUDKIP, AuhofStation_Text_YoshiDefeated)
+    }
+    closemessage
+    setvar (VAR_AUHOFSTATION_STATE, 2)
+	delay (30)
+	fadescreen (FADE_TO_BLACK)
+	removeobject (4)
+	removeobject (3)
+    setflag (FLAG_HIDE_ROUTE_103_RIVAL)
+    fadescreen (FADE_FROM_BLACK)
+    releaseall
+	end
+
+}
+
+text AuhofStation_Text_YoshiDefeated {
+    "Yoshi: Now you are going to make me cry too."
+}
+
+script Auhofstation_Twinni_LostCrying {
+    msgbox ("Twinni: Waaaaaaaaaaaaaaaaah!")
+    waitmessage
+    closemessage
+    
+}
+
+script Auhofstation_Yoshi_LostCrying {
+    msgbox ("Yoshi: Waaaaaaaaaaaaaaaaah!")
+    waitmessage
+    closemessage
+    
+}
+
+script Route1103_Rocksmasher_Hyah {
+    lockall
+    msgbox ("Rocksmasher: Hyaaaa!")
+    playse (SE_PIN)
+    setvar (VAR_TEMP_0,1)
+    waitmessage
+    closemessage
+    releaseall
+
+}

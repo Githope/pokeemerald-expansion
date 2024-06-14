@@ -1,24 +1,24 @@
 NewMauville_Entrance_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, NewMauville_Entrance_OnLoad
-	map_script MAP_SCRIPT_ON_TRANSITION, NewMauville_Entrance_OnTransition
+@@	map_script MAP_SCRIPT_ON_LOAD, NewMauville_Entrance_OnLoad
+@@	map_script MAP_SCRIPT_ON_TRANSITION, NewMauville_Entrance_OnTransition
 	.byte 0
 
-NewMauville_Entrance_OnLoad:
-	call_if_eq VAR_NEW_MAUVILLE_STATE, 0, NewMauville_Entrance_EventScript_CloseDoor
-	end
+@@ NewMauville_Entrance_OnLoad:
+@@	call_if_eq VAR_NEW_MAUVILLE_STATE, 0, NewMauville_Entrance_EventScript_CloseDoor
+@@	end
 
-NewMauville_Entrance_EventScript_CloseDoor::
-	setmetatile 3, 0, METATILE_Facility_NewMauvilleDoor_Closed_Tile0, TRUE
-	setmetatile 4, 0, METATILE_Facility_NewMauvilleDoor_Closed_Tile1, TRUE
-	setmetatile 5, 0, METATILE_Facility_NewMauvilleDoor_Closed_Tile2, TRUE
-	setmetatile 3, 1, METATILE_Facility_NewMauvilleDoor_Closed_Tile3, TRUE
-	setmetatile 4, 1, METATILE_Facility_NewMauvilleDoor_Closed_Tile4, TRUE
-	setmetatile 5, 1, METATILE_Facility_NewMauvilleDoor_Closed_Tile5, TRUE
-	return
+@@ NewMauville_Entrance_EventScript_CloseDoor::
+@@	setmetatile 3, 0, METATILE_Facility_NewMauvilleDoor_Closed_Tile0, TRUE
+@@	setmetatile 4, 0, METATILE_Facility_NewMauvilleDoor_Closed_Tile1, TRUE
+@@	setmetatile 5, 0, METATILE_Facility_NewMauvilleDoor_Closed_Tile2, TRUE
+@@	setmetatile 3, 1, METATILE_Facility_NewMauvilleDoor_Closed_Tile3, TRUE
+@@	setmetatile 4, 1, METATILE_Facility_NewMauvilleDoor_Closed_Tile4, TRUE
+@@	setmetatile 5, 1, METATILE_Facility_NewMauvilleDoor_Closed_Tile5, TRUE
+@@	return
 
-NewMauville_Entrance_OnTransition:
-	setflag FLAG_LANDMARK_NEW_MAUVILLE
-	end
+@@NewMauville_Entrance_OnTransition:
+@@	setflag FLAG_LANDMARK_NEW_MAUVILLE
+@@	end
 
 NewMauville_Entrance_EventScript_Door::
 	lockall
@@ -47,7 +47,8 @@ NewMauville_Entrance_EventScript_DontOpenDoor::
 	end
 
 NewMauville_Entrance_Text_DoorIsLocked:
-	.string "The door is locked.$"
+	.string "You can feel  tremendous amounts of\p"
+	.string "energy radiating from the entrance.$"
 
 NewMauville_Entrance_Text_UseBasementKey:
 	.string "Use the BASEMENT KEY?$"

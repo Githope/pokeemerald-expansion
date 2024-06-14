@@ -162,7 +162,7 @@ LilycoveCity_LilycoveMuseum_1F_EventScript_FatMan::
 	end
 
 LilycoveCity_LilycoveMuseum_1F_Text_WelcomeToLilycoveMuseum:
-	.string "Welcome to LILYCOVE MUSEUM.\p"
+	.string "Welcome to Schloss Schönbrunn.\p"
 	.string "Please take the time to enjoy our\n"
 	.string "collection of fantastic artwork\l"
 	.string "featuring POKéMON.$"

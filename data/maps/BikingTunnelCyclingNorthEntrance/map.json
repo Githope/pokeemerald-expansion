@@ -1,0 +1,84 @@
+{
+  "id": "MAP_BIKING_TUNNEL_CYCLING_NORTH_ENTRANCE",
+  "name": "BikingTunnelCyclingNorthEntrance",
+  "layout": "LAYOUT_BIKING_TUNNEL_CYCLING_NORTH_ENTRANCE",
+  "music": "MUS_CYCLING",
+  "region_map_section": "MAPSEC_UNDERWATER_124",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
+      "x": 7,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route110_SeasideCyclingRoadSouthEntrance_EventScript_Clerk",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 1,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE1116",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE1116",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 12,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_BIKING_TUNNEL2",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 13,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_BIKING_TUNNEL2",
+      "dest_warp_id": "3"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "Route110_SeasideCyclingRoadNorthEntrance_EventScript_ClearCyclingRoad"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route110_SeasideCyclingRoadNorthEntrance_EventScript_BikeCheck"
+    }
+  ],
+  "bg_events": [
+
+  ]
+}

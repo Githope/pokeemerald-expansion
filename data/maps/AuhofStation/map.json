@@ -1,0 +1,256 @@
+{
+  "id": "MAP_AUHOF_STATION",
+  "name": "AuhofStation",
+  "layout": "LAYOUT_AUHOF_STATION",
+  "music": "MUS_CYCLING",
+  "region_map_section": "MAPSEC_OLDALE_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE1102",
+      "offset": -20,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE1104",
+      "offset": 0,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CAMERAMAN",
+      "x": 11,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AuhofStation_EventScript_CameraMan_Sign",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_REPORTER_F",
+      "x": 8,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AuhofStation_EventScript_Reporter_Sign",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 4,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Auhofstation_Twinni_LostCrying",
+      "flag": "FLAG_HIDE_ROUTE_103_RIVAL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 3,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Auhofstation_Yoshi_LostCrying",
+      "flag": "FLAG_HIDE_ROUTE_103_RIVAL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 29,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route115_EventScript_ItemTM01",
+      "flag": "FLAG_ITEM_ROUTE_115_TM01"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_AUHOF_STATION_RAT_HOUSE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_AUHOF_STATION_BIG_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_AUHOF_STATION_MIDDLE_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_AUHOF_STATION_TRAVEL_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 34,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_AUHOF_STATION_SMALL_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_RUSTBORO_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_OLDALE_TOWN_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_AUHOF_STATION_RAT_HOUSE",
+      "dest_warp_id": "9"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_AUHOFSTATION_STATE",
+      "var_value": "0",
+      "script": "Auhofstation_EventScript_TwinniBattle"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_AUHOFSTATION_STATE",
+      "var_value": "0",
+      "script": "Auhofstation_EventScript_TwinniBattle"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_AUHOFSTATION_STATE",
+      "var_value": "1",
+      "script": "Auhofstation_EventScript_YoshiBattle"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_AUHOFSTATION_STATE",
+      "var_value": "1",
+      "script": "Auhofstation_EventScript_YoshiBattle"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "AuhofStation_EventScript_RatHouse_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "AuhofStation_EventScript_SmallHouse_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "sign",
+      "x": 23,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 22,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AuhofStation_EventScript_TravelHouse_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AuhofStation_EventScript_Welcome_Sign"
+    }
+  ]
+}

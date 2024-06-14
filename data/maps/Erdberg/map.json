@@ -1,0 +1,289 @@
+{
+  "id": "MAP_ERDBERG",
+  "name": "Erdberg",
+  "layout": "LAYOUT_ERDBERG",
+  "music": "MUS_MT_CHIMNEY",
+  "region_map_section": "MAPSEC_DEWFORD_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE1107",
+      "offset": -18,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE1108",
+      "offset": 0,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SIDNEY",
+      "x": 36,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x021"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 38,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x021"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 44,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_DEFEATED_DEWFORD_GYM"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 38,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x021"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_F",
+      "x": 33,
+      "y": 18,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route110_EventScript_CyclingGuy2",
+      "flag": "FLAG_UNUSED_0x021"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M",
+      "x": 31,
+      "y": 17,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route110_EventScript_CyclingGuy2",
+      "flag": "FLAG_UNUSED_0x021"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M",
+      "x": 31,
+      "y": 18,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route110_EventScript_CyclingGuy2",
+      "flag": "FLAG_UNUSED_0x021"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "x": 26,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Erdberg_EventScript_Kid",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_COOK",
+      "x": 11,
+      "y": 32,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Erdberg_EventScript_Chef",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 19,
+      "y": 31,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 3,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route112_EventScript_Hiker",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 44,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_FROST_CAVE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_INDOOR_DRACHENBERG_GYM",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_RUSTBORO_CITY_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_ERDBERG",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_ERDBERG_GIFT_MON_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 33,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_SLATEPORT_CITY_POKEMON_FAN_CLUB",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_ERDBERG_STATE",
+      "var_value": "0",
+      "script": "Erdberg_Eventscript_ClashTTandS"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_ERDBERG_STATE",
+      "var_value": "0",
+      "script": "Erdberg_Eventscript_ClashTTandS"
+    },
+    {
+      "type": "trigger",
+      "x": 37,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_ERDBERG_STATE",
+      "var_value": "0",
+      "script": "Erdberg_Eventscript_ClashTTandS"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 30,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Erdberg_EventScript_KitchenSign"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 39,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 39,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 23,
+      "y": 41,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 41,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 44,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Erdberg_EventScript_WelcomeSign"
+    }
+  ]
+}

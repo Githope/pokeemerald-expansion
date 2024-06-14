@@ -24,6 +24,8 @@ MoveTutor_EventScript_SwaggerTaught::
 	release
 	end
 
+
+
 MauvilleCity_EventScript_RolloutTutor::
 	lock
 	faceplayer
