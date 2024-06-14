@@ -10362,12 +10362,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Cale[] = {
     {
     .iv = 0,
     .lvl = 29,
-    .species = SPECIES_IRON_BUNDLE,
+    .species = SPECIES_DUSTOX,
     },
     {
     .iv = 0,
     .lvl = 29,
-    .species = SPECIES_SNORUNT,
+    .species = SPECIES_BEAUTIFLY,
     }
 };
 

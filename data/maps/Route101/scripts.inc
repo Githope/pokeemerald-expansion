@@ -240,7 +240,7 @@ Route101_EventScript_BirchsBag::
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	warp MAP_LIESING_TOWN, 26, 11
 	waitstate
-	release
+	releaseall
 	end
 
 Route101_EventScript_HideMayInBedroom::
