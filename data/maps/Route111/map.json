@@ -239,6 +239,22 @@
       "flag": "0"
     },
     {
+<<<<<<< HEAD
+=======
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 33,
+      "y": 104,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_SANDSTORM",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_111_TM_SANDSTORM"
+    },
+    {
+>>>>>>> 680c5581d4a2572cc336bb9e7107d2793d5baf56
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 18,
       "y": 5,
@@ -318,6 +334,22 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+<<<<<<< HEAD
+=======
+      "x": 12,
+      "y": 54,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_STARDUST",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_111_STARDUST"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+>>>>>>> 680c5581d4a2572cc336bb9e7107d2793d5baf56
       "x": 3,
       "y": 114,
       "elevation": 3,
@@ -325,8 +357,8 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route111_EventScript_ItemHPUp",
+      "trainer_sight_or_berry_tree_id": "ITEM_HP_UP",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_111_HP_UP"
     },
     {
@@ -434,6 +466,22 @@
       "flag": "0"
     },
     {
+<<<<<<< HEAD
+=======
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 19,
+      "y": 118,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_ELIXIR",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_111_ELIXIR"
+    },
+    {
+>>>>>>> 680c5581d4a2572cc336bb9e7107d2793d5baf56
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
       "x": 11,
       "y": 51,

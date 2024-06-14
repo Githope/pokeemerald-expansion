@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Route102_EventScript_ItemPotion::
 	finditem ITEM_POTION
 	end
@@ -656,4 +657,9 @@ MagmaHideout_4F_EventScript_ItemMaxRevive::
 
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
+=======
+Common_EventScript_FindItem::
+	callnative GetItemBallIdAndAmountFromTemplate
+	finditem VAR_RESULT VAR_0x8009
+>>>>>>> 680c5581d4a2572cc336bb9e7107d2793d5baf56
 	end

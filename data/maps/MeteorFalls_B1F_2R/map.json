@@ -23,6 +23,7 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
+<<<<<<< HEAD
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MeteorFalls_B1F_2R_EventScript_ItemTM02",
       "flag": "FLAG_ITEM_METEOR_FALLS_B1F_2R_TM02"
@@ -65,6 +66,11 @@
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route119_WeatherInstitute_2F_EventScript_Grunt2",
       "flag": "FLAG_HIDE_ROUTE_119_TEAM_AQUA"
+=======
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_DRAGON_CLAW",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_METEOR_FALLS_B1F_2R_TM_DRAGON_CLAW"
+>>>>>>> 680c5581d4a2572cc336bb9e7107d2793d5baf56
     }
   ],
   "warp_events": [
